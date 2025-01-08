@@ -40,25 +40,43 @@ document.getElementById('select-all').addEventListener('click', () => {
   updateMarkers();
 });
 
-// Handle year checkbox toggle
-document.querySelectorAll('.year-checkbox').forEach(yearCheckbox => {
-  yearCheckbox.addEventListener('change', (event) => {
-    const year = event.target.getAttribute('data-year');
-    const isChecked = event.target.checked;
-
-    // Auto-check/uncheck all child tours of the selected year
-    document.querySelectorAll(`.tour-checkbox[data-tour^="${year}"]`).forEach(checkbox => {
-      checkbox.checked = isChecked;
+// Handle year-checkbox toggle
+document.querySelectorAll('.year-checkbox').forEach((yearCheckbox) => {
+    yearCheckbox.addEventListener('change', (event) => {
+      const isChecked = event.target.checked;
+  
+      // Find the corresponding <ul> of child checkboxes and update them
+      const parentLi = event.target.closest('li'); // Get the parent <li> of the year-checkbox
+      if (parentLi) {
+        parentLi.querySelectorAll('.tour-checkbox').forEach((checkbox) => {
+          checkbox.checked = isChecked;
+        });
+      }
+  
+      updateMarkers(); // Refresh the map markers
     });
-
-    updateMarkers();
   });
-});
-
-// Handle individual tour checkbox change
-document.querySelectorAll('.tour-checkbox').forEach(tourCheckbox => {
-  tourCheckbox.addEventListener('change', updateMarkers);
-});
+  
+  // Handle individual tour-checkbox toggle
+  document.querySelectorAll('.tour-checkbox').forEach((tourCheckbox) => {
+    tourCheckbox.addEventListener('change', () => {
+      const parentLi = tourCheckbox.closest('ul').closest('li'); // Get the parent <li> of the year-checkbox
+      if (parentLi) {
+        // Check if all tour-checkboxes inside the <ul> are selected
+        const allSelected = Array.from(parentLi.querySelectorAll('.tour-checkbox')).every(
+          (checkbox) => checkbox.checked
+        );
+  
+        // Update the year-checkbox based on the state of its children
+        const yearCheckbox = parentLi.querySelector('.year-checkbox');
+        if (yearCheckbox) {
+          yearCheckbox.checked = allSelected;
+        }
+      }
+  
+      updateMarkers(); // Refresh the map markers
+    });
+  });
 
 // Update markers based on selected tours
 function updateMarkers() {
