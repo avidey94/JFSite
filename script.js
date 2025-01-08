@@ -5,26 +5,27 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 }).addTo(map);
 
 const venues = [
-  {
-    name: "The Roxy Theatre",
-    city: "Los Angeles, CA",
-    coordinates: [34.0909, -118.3856],
-    media: [
-      { type: "image", src: "https://i.ido.bi/assets/high-life/2023/06/jfb-tour-01-1536x1536.jpeg", tour: "summer-2015" },
-      { type: "video", src: "https://www.w3schools.com/html/mov_bbb.mp4", tour: "fall-2015" },
-      { type: "image", src: "https://via.placeholder.com/800x600?text=Performance+2", tour: "summer-2016" }
-    ]
-  },
-  {
-    name: "House of Blues",
-    city: "Chicago, IL",
-    coordinates: [41.8927, -87.6244],
-    media: [
-      { type: "image", src: "https://via.placeholder.com/800x600?text=Performance+3", tour: "fall-2016" },
-      { type: "video", src: "https://www.w3schools.com/html/movie.mp4", tour: "summer-2016" }
-    ]
-  }
-];
+    {
+      name: "The Roxy Theatre",
+      city: "Los Angeles, CA",
+      coordinates: [34.0909, -118.3856],
+      media: [
+        { type: "image", src: "https://i.ido.bi/assets/high-life/2023/06/jfb-tour-01-1536x1536.jpeg", tour: "summer-2015", highlight: true },
+        { type: "video", src: "https://www.w3schools.com/html/mov_bbb.mp4", tour: "fall-2015" },
+        { type: "image", src: "https://via.placeholder.com/800x600?text=Performance+2", tour: "summer-2016" }
+      ]
+    },
+    {
+      name: "House of Blues",
+      city: "Chicago, IL",
+      coordinates: [41.8927, -87.6244],
+      media: [
+        { type: "image", src: "https://i.ido.bi/assets/high-life/2023/06/jfb-tour-01-1536x1536.jpeg", tour: "fall-2016"},
+        { type: "video", src: "https://www.w3schools.com/html/movie.mp4", tour: "summer-2016"},
+        { type: "image", src: "https://via.placeholder.com/800x600?text=Performance+2", tour: "summer-2016", highlight: true }
+      ]
+    }
+  ];
 
 const markers = [];
 const swiperWrapper = document.querySelector('.swiper-wrapper');
@@ -61,32 +62,35 @@ document.querySelectorAll('.tour-checkbox').forEach(tourCheckbox => {
 
 // Update markers based on selected tours
 function updateMarkers() {
-  markers.forEach(marker => map.removeLayer(marker));
-  markers.length = 0;
-
-  const selectedTours = Array.from(document.querySelectorAll('.tour-checkbox:checked')).map(checkbox =>
-    checkbox.getAttribute('data-tour')
-  );
-
-  venues.forEach(venue => {
-    const filteredMedia = venue.media.filter(item => selectedTours.includes(item.tour));
-
-    if (filteredMedia.length > 0) {
-      const marker = L.marker(venue.coordinates).addTo(map);
-      markers.push(marker);
-
-      // Tooltip on hover
-      const flyer = filteredMedia.find(item => item.type === "image")?.src || ""; // Use the first flyer image
-      marker.bindTooltip(
-        `<strong>${venue.name}</strong><br/><img src="${flyer}" alt="Flyer" style="width:100px;">`,
-        { permanent: false, direction: "top", offset: [0, -10] }
-      );
-
-      // Fullscreen on click
-      marker.on('click', () => openFullscreen(filteredMedia));
-    }
-  });
-}
+    markers.forEach(marker => map.removeLayer(marker));
+    markers.length = 0;
+  
+    const selectedTours = Array.from(document.querySelectorAll('.tour-checkbox:checked')).map(checkbox =>
+      checkbox.getAttribute('data-tour')
+    );
+  
+    venues.forEach(venue => {
+      const filteredMedia = venue.media.filter(item => selectedTours.includes(item.tour));
+  
+      if (filteredMedia.length > 0) {
+        const marker = L.marker(venue.coordinates).addTo(map);
+        markers.push(marker);
+  
+        // Find the highlighted content
+        const highlightMedia = filteredMedia.find(item => item.highlight) || filteredMedia[0]; // Fallback to the first item
+  
+        // Tooltip on hover
+        const flyer = highlightMedia?.src || ""; // Use the highlight's source
+        marker.bindTooltip(
+          `<strong>${venue.name}</strong><br/><img src="${flyer}" alt="Flyer" style="width:100px;">`,
+          { permanent: false, direction: "top", offset: [0, -10] }
+        );
+  
+        // Fullscreen on click
+        marker.on('click', () => openFullscreen(filteredMedia));
+      }
+    });
+  }
 
 function openFullscreen(media) {
   swiperWrapper.innerHTML = ''; // Clear previous content
