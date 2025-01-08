@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Map - Band Performances</title>
+  <!-- Leaflet.js CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" />
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="filter-container">
+    <button id="select-all">All Tours</button>
+    <ul>
+      <li>
+        <label><input type="checkbox" class="year-checkbox" data-year="2015"> 2015</label>
+        <ul class="indent">
+          <li>
+            <label><input type="checkbox" class="tour-checkbox" data-tour="summer-2015"> Summer 2015 Tour</label>
+          </li>
+          <li>
+            <label><input type="checkbox" class="tour-checkbox" data-tour="fall-2015"> Fall 2015 Tour</label>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <label><input type="checkbox" class="year-checkbox" data-year="2016"> 2016</label>
+        <ul class="indent">
+          <li>
+            <label><input type="checkbox" class="tour-checkbox" data-tour="summer-2016"> Summer 2016 Tour</label>
+          </li>
+          <li>
+            <label><input type="checkbox" class="tour-checkbox" data-tour="fall-2016"> Fall 2016 Tour</label>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+
+  <div id="map"></div>
+
+  <!-- Fullscreen Media Overlay -->
+  <div id="fullscreen-overlay">
+    <button id="close-button">Close</button>
+    <div class="swiper">
+      <div class="swiper-wrapper"></div>
+      <div class="swiper-pagination"></div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+    </div>
+  </div>
+
+  <!-- JavaScript Libraries -->
+  <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <!-- Custom JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
