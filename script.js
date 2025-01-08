@@ -126,5 +126,16 @@ closeButton.addEventListener('click', () => {
   overlay.style.display = 'none';
 });
 
+// Select all tours by default on page load
+window.addEventListener('DOMContentLoaded', () => {
+    // Trigger the "Select All" functionality
+    document.querySelectorAll('#filter-container input[type="checkbox"]').forEach(checkbox => {
+      checkbox.checked = true;
+    });
+  
+    // Update the markers to reflect the selected tours
+    updateMarkers();
+  });
+
 // Initial load
 updateMarkers();
