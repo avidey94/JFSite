@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Map - Band Performances</title>
+  <!-- Leaflet.js CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" />
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    #map {
+      height: 100vh;
+      width: 100%;
+    }
+
+    #filter-container {
+      position: absolute;
+      bottom: 10px;
+      left: 10px;
+      z-index: 1000;
+      background-color: white;
+      padding: 10px;
+      border-radius: 5px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      max-width: 300px;
+    }
+
+    .indent {
+      margin-left: 20px;
+    }
+
+    /* Fullscreen Overlay */
+    #fullscreen-overlay {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.9);
+      z-index: 9999;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #fullscreen-overlay .swiper {
+      width: 80%;
+      height: 80%;
+    }
+
+    #fullscreen-overlay .swiper-slide {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #fullscreen-overlay img,
+    #fullscreen-overlay video {
+      max-width: 100%;
+      max-height: 100%;
+    }
+
+    #close-button {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background: white;
+      border: none;
+      padding: 10px;
+      cursor: pointer;
+      font-size: 16px;
+      z-index: 10000;
+    }
+
+    .swiper-pagination-bullet {
+  background-color: red !important; /* Set the color of the pagination dots */
+  opacity: 1; /* Ensure full visibility */
+}
+
+.swiper-pagination-bullet-active {
+  background-color: darkred !important; /* Set a darker color for the active dot */
+}
+  </style>
+</head>
+<body>
+  <div id="filter-container">
+    <button id="select-all">All Tours</button>
+    <ul>
+      <li>
+        <label><input type="checkbox" class="year-checkbox" data-year="2015"> 2015</label>
+        <ul class="indent">
+          <li>
+            <label><input type="checkbox" class="tour-checkbox" data-tour="summer-2015"> Summer 2015 Tour</label>
+          </li>
+          <li>
+            <label><input type="checkbox" class="tour-checkbox" data-tour="fall-2015"> Fall 2015 Tour</label>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <label><input type="checkbox" class="year-checkbox" data-year="2016"> 2016</label>
+        <ul class="indent">
+          <li>
+            <label><input type="checkbox" class="tour-checkbox" data-tour="summer-2016"> Summer 2016 Tour</label>
+          </li>
+          <li>
+            <label><input type="checkbox" class="tour-checkbox" data-tour="fall-2016"> Fall 2016 Tour</label>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+
+  <div id="map"></div>
+
+  <!-- Fullscreen Media Overlay -->
+  <div id="fullscreen-overlay">
+    <button id="close-button">Close</button>
+    <div class="swiper">
+      <div class="swiper-wrapper"></div>
+      <div class="swiper-pagination"></div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+    </div>
+  </div>
+
+  <!-- Leaflet.js and Swiper.js JavaScript -->
+  <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script>
+    const map = L.map('map').setView([39.8283, -98.5795], 4);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      maxZoom: 19,
+      attribution: '© OpenStreetMap contributors'
+    }).addTo(map);
+
+    const venues = [
+      {
+        name: "The Roxy Theatre",
+        city: "Los Angeles, CA",
+        coordinates: [34.0909, -118.3856],
+        media: [
+          { type: "image", src: "https://via.placeholder.com/800x600?text=Performance+1", tour: "summer-2015" },
+          { type: "video", src: "https://www.w3schools.com/html/mov_bbb.mp4", tour: "fall-2015" },
+          { type: "image", src: "https://via.placeholder.com/800x600?text=Performance+2", tour: "summer-2016" }
+        ]
+      },
+      {
+        name: "House of Blues",
+        city: "Chicago, IL",
+        coordinates: [41.8927, -87.6244],
+        media: [
+          { type: "image", src: "https://via.placeholder.com/800x600?text=Performance+3", tour: "fall-2016" },
+          { type: "video", src: "https://www.w3schools.com/html/movie.mp4", tour: "summer-2016" }
+        ]
+      }
+    ];
+
+    const markers = [];
+    const swiperWrapper = document.querySelector('.swiper-wrapper');
+    const overlay = document.getElementById('fullscreen-overlay');
+    const closeButton = document.getElementById('close-button');
+
+    // Handle Select All functionality
+    document.getElementById('select-all').addEventListener('click', () => {
+      document.querySelectorAll('#filter-container input[type="checkbox"]').forEach(checkbox => {
+        checkbox.checked = true;
+      });
+      updateMarkers();
+    });
+
+    // Handle year checkbox toggle
+    document.querySelectorAll('.year-checkbox').forEach(yearCheckbox => {
+      yearCheckbox.addEventListener('change', (event) => {
+        const year = event.target.getAttribute('data-year');
+        const isChecked = event.target.checked;
+
+        // Auto-check/uncheck all child tours of the selected year
+        document.querySelectorAll(`.tour-checkbox[data-tour^="${year}"]`).forEach(checkbox => {
+          checkbox.checked = isChecked;
+        });
+
+        updateMarkers();
+      });
+    });
+
+    // Handle individual tour checkbox change
+    document.querySelectorAll('.tour-checkbox').forEach(tourCheckbox => {
+      tourCheckbox.addEventListener('change', updateMarkers);
+    });
+
+    // Update markers based on selected tours
+    function updateMarkers() {
+  markers.forEach(marker => map.removeLayer(marker));
+  markers.length = 0;
+
+  const selectedTours = Array.from(document.querySelectorAll('.tour-checkbox:checked')).map(checkbox =>
+    checkbox.getAttribute('data-tour')
+  );
+
+  venues.forEach(venue => {
+    const filteredMedia = venue.media.filter(item => selectedTours.includes(item.tour));
+
+    if (filteredMedia.length > 0) {
+      const marker = L.marker(venue.coordinates).addTo(map);
+      markers.push(marker);
+
+      // Tooltip on hover
+      const flyer = filteredMedia.find(item => item.type === "image")?.src || ""; // Use the first flyer image
+      marker.bindTooltip(
+        `<strong>${venue.name}</strong><br/><img src="${flyer}" alt="Flyer" style="width:100px;">`,
+        { permanent: false, direction: "top", offset: [0, -10] }
+      );
+
+      // Fullscreen on click
+      marker.on('click', () => openFullscreen(filteredMedia));
+    }
+  });
+}
+
+    function openFullscreen(media) {
+      swiperWrapper.innerHTML = ''; // Clear previous content
+      media.forEach(item => {
+        const slide = document.createElement('div');
+        slide.classList.add('swiper-slide');
+        if (item.type === 'image') {
+          slide.innerHTML = `<img src="${item.src}" alt="Performance Image">`;
+        } else if (item.type === 'video') {
+          slide.innerHTML = `<video controls>
+                               <source src="${item.src}" type="video/mp4">
+                             </video>`;
+        }
+        swiperWrapper.appendChild(slide);
+      });
+
+      const swiper = new Swiper('.swiper', {
+        loop: true,
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev'
+        },
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true
+        }
+      });
+
+      overlay.style.display = 'flex';
+    }
+
+    closeButton.addEventListener('click', () => {
+      overlay.style.display = 'none';
+    });
+
+    // Initial load
+    updateMarkers();
+  </script>
+</body>
+</html>
