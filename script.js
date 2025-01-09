@@ -1,8 +1,20 @@
-const map = L.map('map').setView([39.8283, -98.5795], 4);
-L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-  maxZoom: 19,
-  attribution: '© OpenStreetMap contributors'
-}).addTo(map);
+const map = L.map('map', {
+    center: [0, 0], // Center the map at the equator
+    zoom: 2, // Default zoom level
+    minZoom: 2, // Minimum zoom level (restricts zooming out too far)
+    maxZoom: 19, // Maximum zoom level
+    maxBounds: [
+      [-90, -180], // Southwest corner of the world
+      [90, 180]    // Northeast corner of the world
+    ],
+    maxBoundsViscosity: 1.0 // Fully restricts panning outside bounds
+  });
+  
+  // Add the tile layer
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 19,
+    attribution: '© OpenStreetMap contributors'
+  }).addTo(map);
 
 const venues = [
     {
