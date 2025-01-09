@@ -1,14 +1,18 @@
+// Determine the initial zoom level based on screen size
+const initialZoom = window.innerWidth <= 768 ? 3 : 4; // Zoom out more on mobile (<= 768px)
+
+// Initialize the map with the dynamic zoom level
 const map = L.map('map', {
-    center: [39.8283, -98.5795], // Center on the USA
-    zoom: 4, // Default zoom level
-    minZoom: 2, // Restrict zooming out too far
-    maxZoom: 19, // Restrict zooming in too far
-    maxBounds: [
-      [-90, -180], // Southwest corner of the world
-      [90, 180]    // Northeast corner of the world
-    ],
-    maxBoundsViscosity: 1.0 // Restrict panning outside bounds
-  });
+  center: [39.8283, -98.5795], // Center on the USA
+  zoom: initialZoom, // Use the calculated initial zoom level
+  minZoom: 2, // Restrict zooming out too far
+  maxZoom: 19, // Restrict zooming in too far
+  maxBounds: [
+    [-90, -180], // Southwest corner of the world
+    [90, 180]    // Northeast corner of the world
+  ],
+  maxBoundsViscosity: 1.0 // Restrict panning outside bounds
+});
   
   // Add the tile layer
   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
