@@ -77,7 +77,7 @@
       z-index: 10000;
     }
 
-    .swiper-pagination-bullet {
+.swiper-pagination-bullet {
   background-color: purple !important; /* Set the color of the pagination dots */
   opacity: 1; /* Ensure full visibility */
 }
@@ -89,7 +89,9 @@
 </head>
 <body>
   <div id="filter-container">
-    <button id="select-all">All Tours</button>
+    <label>
+      <input type="checkbox" id="select-all"> All Tours
+    </label>
     <ul>
       <li>
         <label><input type="checkbox" class="year-checkbox" data-year="2015"> 2015</label>
