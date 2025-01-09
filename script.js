@@ -254,7 +254,7 @@ document.querySelectorAll('.year-checkbox').forEach((yearCheckbox) => {
       const parentLi = event.target.closest('li'); // Get the parent <li> of the year-checkbox
       if (parentLi) {
         parentLi.querySelectorAll('.tour-checkbox').forEach((checkbox) => {
-          checkbox.checked = isChecked;
+          checkbox.checked = isChecked; // Check/uncheck all child tour-checkboxes
         });
       }
   
@@ -265,19 +265,8 @@ document.querySelectorAll('.year-checkbox').forEach((yearCheckbox) => {
   // Handle individual tour-checkbox toggle
   document.querySelectorAll('.tour-checkbox').forEach((tourCheckbox) => {
     tourCheckbox.addEventListener('change', () => {
-      const parentLi = tourCheckbox.closest('ul').closest('li'); // Get the parent <li> of the year-checkbox
-      if (parentLi) {
-        // Check if all tour-checkboxes inside the <ul> are selected
-        const allSelected = Array.from(parentLi.querySelectorAll('.tour-checkbox')).every(
-          (checkbox) => checkbox.checked
-        );
-  
-        // Update the year-checkbox based on the state of its children
-        const yearCheckbox = parentLi.querySelector('.year-checkbox');
-        if (yearCheckbox) {
-          yearCheckbox.checked = allSelected;
-        }
-      }
+      // Prevent any changes to the corresponding year-checkbox
+      // (No logic to update the year-checkbox based on child tour-checkbox states)
   
       updateMarkers(); // Refresh the map markers
     });
