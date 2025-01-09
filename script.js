@@ -1,16 +1,14 @@
 const map = L.map('map', {
-    zoom: 4, // Default zoom level for the USA
-    minZoom: 2, // Minimum zoom level
-    maxZoom: 19, // Maximum zoom level
+    center: [39.8283, -98.5795], // Center on the USA
+    zoom: 4, // Default zoom level
+    minZoom: 2, // Restrict zooming out too far
+    maxZoom: 19, // Restrict zooming in too far
     maxBounds: [
       [-90, -180], // Southwest corner of the world
       [90, 180]    // Northeast corner of the world
     ],
-    maxBoundsViscosity: 1.0 // Fully restricts panning outside bounds
+    maxBoundsViscosity: 1.0 // Restrict panning outside bounds
   });
-  
-  // Set the initial view to the USA
-  map.setView([39.8283, -98.5795], 4); // Coordinates of the USA (latitude, longitude)
   
   // Add the tile layer
   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -38,7 +36,17 @@ const venues = [
         { type: "video", src: "https://www.w3schools.com/html/movie.mp4", tour: "summer-2016"},
         { type: "image", src: "https://via.placeholder.com/800x600?text=Performance+2", tour: "summer-2016"}
       ]
-    }
+    },
+    {
+        name: "Fox Theater",
+        city: "Oakland, CA",
+        coordinates: [37.8927, -122.6244],
+        media: [
+          { type: "image", src: "https://chorus.fm/wp-content/uploads/cdn/kzbwkejl_39303.jpeg", tour: "fall-2016", highlight: true},
+          { type: "video", src: "https://www.w3schools.com/html/movie.mp4", tour: "summer-2016"},
+          { type: "image", src: "https://via.placeholder.com/800x600?text=Performance+2", tour: "summer-2016"}
+        ]
+      }
   ];
 
 const markers = [];
@@ -183,6 +191,22 @@ window.addEventListener('DOMContentLoaded', () => {
     // Update the markers to reflect the selected tours
     updateMarkers();
   });
-
 // Initial load
 updateMarkers();
+
+// Reference the map and scroll indicator
+const mapScrollIndicator = document.getElementById('map-scroll-indicator');
+
+// Function to hide the scroll indicator
+function hideMapScrollIndicator() {
+  if (mapScrollIndicator) {
+    mapScrollIndicator.classList.add('hidden'); // Add the "hidden" class to fade it out
+    setTimeout(() => {
+      mapScrollIndicator.style.display = 'none'; // Remove it from view after fade-out
+    }, 500); // Wait for the fade-out animation (0.5s)
+  }
+}
+
+// Detect user interaction with the map
+map.on('move', hideMapScrollIndicator); // Hide on drag or pan
+map.on('zoom', hideMapScrollIndicator); // Hide on zoom
