@@ -176,3 +176,13 @@ body {
     opacity: 1;
     pointer-events: all;
   }
+
+  #filter-container ul {
+    list-style-type: none; /* Remove bullet points */
+    padding-left: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+  }
+  
+  #filter-container ul .indent {
+    margin-left: 20px; /* Keep the indentation for child elements */
+  }
