@@ -137,6 +137,8 @@ function updateMarkers() {
     });
   }
 
+  // sup hanit
+
 function openFullscreen(media) {
   swiperWrapper.innerHTML = ''; // Clear previous content
   media.forEach(item => {
