@@ -32,9 +32,9 @@ const venues = [
       city: "Chicago, IL",
       coordinates: [41.8927, -87.6244],
       media: [
-        { type: "image", src: "https://i.ido.bi/assets/high-life/2023/06/jfb-tour-01-1536x1536.jpeg", tour: "fall-2016"},
+        { type: "image", src: "https://chorus.fm/wp-content/uploads/cdn/kzbwkejl_39303.jpeg", tour: "fall-2016", highlight: true},
         { type: "video", src: "https://www.w3schools.com/html/movie.mp4", tour: "summer-2016"},
-        { type: "image", src: "https://via.placeholder.com/800x600?text=Performance+2", tour: "summer-2016", highlight: true }
+        { type: "image", src: "https://via.placeholder.com/800x600?text=Performance+2", tour: "summer-2016"}
       ]
     }
   ];
