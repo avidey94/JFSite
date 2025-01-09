@@ -1,7 +1,6 @@
 const map = L.map('map', {
-    center: [0, 0], // Center the map at the equator
-    zoom: 2, // Default zoom level
-    minZoom: 2, // Minimum zoom level (restricts zooming out too far)
+    zoom: 4, // Default zoom level for the USA
+    minZoom: 2, // Minimum zoom level
     maxZoom: 19, // Maximum zoom level
     maxBounds: [
       [-90, -180], // Southwest corner of the world
@@ -9,6 +8,9 @@ const map = L.map('map', {
     ],
     maxBoundsViscosity: 1.0 // Fully restricts panning outside bounds
   });
+  
+  // Set the initial view to the USA
+  map.setView([39.8283, -98.5795], 4); // Coordinates of the USA (latitude, longitude)
   
   // Add the tile layer
   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -41,8 +43,21 @@ const venues = [
 
 const markers = [];
 const swiperWrapper = document.querySelector('.swiper-wrapper');
+// Get references to the overlay and close button
 const overlay = document.getElementById('fullscreen-overlay');
 const closeButton = document.getElementById('close-button');
+
+// Close the overlay when clicking the close button
+closeButton.addEventListener('click', () => {
+  overlay.style.display = 'none';
+});
+
+// Close the overlay when clicking on the black area outside the close button
+overlay.addEventListener('click', (event) => {
+  if (event.target === overlay) { // Ensure click is on the overlay itself
+    overlay.style.display = 'none';
+  }
+});
 
 // Handle Select All functionality
 document.getElementById('select-all').addEventListener('click', () => {
