@@ -369,7 +369,7 @@ function hideMapScrollIndicator() {
     mapScrollIndicator.classList.add('hidden'); // Add the "hidden" class to fade it out
     setTimeout(() => {
       mapScrollIndicator.style.display = 'none'; // Remove it from view after fade-out
-    }, 500); // Wait for the fade-out animation (0.5s)
+    }, 5000); // Wait for the fade-out animation (0.5s)
   }
 }
 
@@ -396,4 +396,23 @@ function updateAllCheckboxState() {
   const allCheckboxes = document.querySelectorAll('#filter-container input[type="checkbox"]:not(#select-all)');
   const allChecked = Array.from(allCheckboxes).every(checkbox => checkbox.checked);
 }
+
+// Get references to the button and the filter container
+const filterToggleButton = document.getElementById('filter-toggle-button');
+const filterContainer = document.getElementById('filter-container');
+
+// Toggle the filter container visibility
+filterToggleButton.addEventListener('click', () => {
+  if (filterContainer.classList.contains('collapsed')) {
+    // Expand the filter container
+    filterContainer.classList.remove('collapsed');
+    filterContainer.classList.add('expanded');
+    filterToggleButton.textContent = 'Close Filter'; // Update button text
+  } else {
+    // Collapse the filter container
+    filterContainer.classList.remove('expanded');
+    filterContainer.classList.add('collapsed');
+    filterToggleButton.textContent = 'Filter'; // Update button text
+  }
+});
 
