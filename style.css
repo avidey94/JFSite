@@ -1,10 +1,12 @@
+/* Ensure the header remains visible */
 body {
     margin: 0;
+    padding: 0;
     font-family: Arial, sans-serif;
   }
   
   #map {
-    height: 100vh;
+    height: calc(100vh - 60px); /* Adjust map height to leave space for the header (60px is approximate header height) */
     width: 100%;
   }
   
