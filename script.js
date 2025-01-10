@@ -359,10 +359,13 @@ const mapScrollIndicator = document.getElementById('map-scroll-indicator');
 // Function to hide the scroll indicator
 function hideMapScrollIndicator() {
   if (mapScrollIndicator) {
-    mapScrollIndicator.classList.add('hidden'); // Add the "hidden" class to fade it out
+    // Apply the transition inline
+    mapScrollIndicator.style.transition = "opacity 3s ease-out";
+    mapScrollIndicator.style.opacity = "0"; // Start the fade-out effect
+
     setTimeout(() => {
-      mapScrollIndicator.style.display = 'none'; // Remove it from view after fade-out
-    }, 5000); // Wait for the fade-out animation (0.5s)
+      mapScrollIndicator.style.display = "none"; // Remove it from view after fade-out
+    }, 3000); // Match the 3-second fade-out duration
   }
 }
 
@@ -408,4 +411,3 @@ filterToggleButton.addEventListener('click', () => {
     filterToggleButton.textContent = 'Filter'; // Update button text
   }
 });
-
