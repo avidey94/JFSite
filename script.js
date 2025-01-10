@@ -141,49 +141,237 @@ const map = L.map('map', {
     //   ]
     // },
   
-    // // 2023 Venues
-    // {
-    //   name: "Revolution Hall",
-    //   city: "Portland, OR",
-    //   coordinates: [45.5165, -122.6458],
-    //   media: [
-    //     { type: "image", src: "https://via.placeholder.com/800x600?text=Performance+Revolution", tour: "spring-2023", highlight: true },
-    //     { type: "video", src: "https://www.w3schools.com/html/movie.mp4", tour: "fall-2023" }
-    //   ]
-    // },
-    // {
-    //   name: "The Crescent Ballroom",
-    //   city: "Phoenix, AZ",
-    //   coordinates: [33.4522, -112.0738],
-    //   media: [
-    //     { type: "image", src: "https://via.placeholder.com/800x600?text=Performance+Crescent", tour: "summer-2023" },
-    //     { type: "video", src: "https://www.w3schools.com/html/mov_bbb.mp4", tour: "fall-2023", highlight: true }
-    //   ]
-    // },
+    // 2023 Venues
+    // JF | BEARINGS TOUR 
+    {
+        name: "RIOT FEST",
+        city: "Chicago, IL",
+        coordinates: [41.8623, -87.6995],
+        media: [
+            { type: "image", src: "https://cdn.shopify.com/s/files/1/0839/0154/6770/files/F5g_uoeW8AA0jiH.jpg-large.jpg?v=1736550264", tour: "fall-2023", highlight: true },
+            { type: "video", src: "https://www.w3schools.com/html/mov_bbb.mp4", tour: "fall-2023", highlight: true }
+        ]
+    },
+    {
+        name: "THE SANCTUARY",
+        city: "Detroit, MI",
+        coordinates: [42.3999, -83.0590],
+        media: [
+            { type: "image", src: "https://cdn.shopify.com/s/files/1/0839/0154/6770/files/F5g_uoeW8AA0jiH.jpg-large.jpg?v=1736550264", tour: "fall-2023", highlight: true },
+            { type: "video", src: "https://www.w3schools.com/html/mov_bbb.mp4", tour: "fall-2023", highlight: true }
+        ]
+    },
+    {
+        name: "THE OPERA HOUSE",
+        city: "Toronto, ON",
+        coordinates: [43.6589, -79.3488],
+        media: [
+            { type: "image", src: "https://cdn.shopify.com/s/files/1/0839/0154/6770/files/F5g_uoeW8AA0jiH.jpg-large.jpg?v=1736550264", tour: "fall-2023", highlight: true },
+            { type: "video", src: "https://www.w3schools.com/html/mov_bbb.mp4", tour: "fall-2023", highlight: true }
+        ]
+    },
+    {
+        name: "EMPIRE UNDERGROUND",
+        city: "Albany, NY",
+        coordinates: [42.6527, -73.7504],
+        media: [
+            { type: "image", src: "https://cdn.shopify.com/s/files/1/0839/0154/6770/files/F5g_uoeW8AA0jiH.jpg-large.jpg?v=1736550264", tour: "fall-2023", highlight: true },
+            { type: "video", src: "https://www.w3schools.com/html/mov_bbb.mp4", tour: "fall-2023", highlight: true }
+        ]
+    },
+    {
+        name: "UNION TRANSFER",
+        city: "Philadelphia, PA",
+        coordinates: [39.9614, -75.1553],
+        media: [
+            { type: "image", src: "https://cdn.shopify.com/s/files/1/0839/0154/6770/files/F5g_uoeW8AA0jiH.jpg-large.jpg?v=1736550264", tour: "fall-2023", highlight: true },
+            { type: "video", src: "https://www.w3schools.com/html/mov_bbb.mp4", tour: "fall-2023", highlight: true }
+        ]
+    },
+    {
+        name: "RACKET",
+        city: "NYC, NY",
+        coordinates: [40.7431, -74.0057],
+        media: [
+            { type: "image", src: "https://cdn.shopify.com/s/files/1/0839/0154/6770/files/F5g_uoeW8AA0jiH.jpg-large.jpg?v=1736550264", tour: "fall-2023", highlight: true },
+            { type: "video", src: "https://www.w3schools.com/html/mov_bbb.mp4", tour: "fall-2023", highlight: true }
+        ]
+    },
+    {
+        name: "CRYSTAL BALLROOM",
+        city: "Boston, MA",
+        coordinates: [42.39665, -71.12300],
+        media: [
+            { type: "image", src: "https://cdn.shopify.com/s/files/1/0839/0154/6770/files/F5g_uoeW8AA0jiH.jpg-large.jpg?v=1736550264", tour: "fall-2023", highlight: true },
+            { type: "video", src: "https://www.w3schools.com/html/mov_bbb.mp4", tour: "fall-2023", highlight: true }
+        ]
+    },
+    {
+        name: "SPACE BALLROOM",
+        city: "New Haven, CT",
+        coordinates: [41.3535, -72.9254],
+        media: [
+            { type: "image", src: "https://cdn.shopify.com/s/files/1/0839/0154/6770/files/F5g_uoeW8AA0jiH.jpg-large.jpg?v=1736550264", tour: "fall-2023", highlight: true },
+            { type: "video", src: "https://www.w3schools.com/html/mov_bbb.mp4", tour: "fall-2023", highlight: true }
+        ]
+    },
+    {
+        name: "THE SONG & DANCE",
+        city: "Syracus, NY",
+        coordinates: [43.0472, -76.1517],
+        media: [
+            { type: "image", src: "https://cdn.shopify.com/s/files/1/0839/0154/6770/files/F5g_uoeW8AA0jiH.jpg-large.jpg?v=1736550264", tour: "fall-2023", highlight: true },
+            { type: "video", src: "https://www.w3schools.com/html/mov_bbb.mp4", tour: "fall-2023", highlight: true }
+        ]
+    },
+    {
+        name: "THE ENCLAVE",
+        city: "Pittsburgh, PA",
+        coordinates: [40.4287, -79.9824],
+        media: [
+            { type: "image", src: "https://cdn.shopify.com/s/files/1/0839/0154/6770/files/F5g_uoeW8AA0jiH.jpg-large.jpg?v=1736550264", tour: "fall-2023", highlight: true },
+            { type: "video", src: "https://www.w3schools.com/html/mov_bbb.mp4", tour: "fall-2023", highlight: true }
+        ]
+    },
+    {
+        name: "ACE OF CUPS",
+        city: "Columnbus, OH",
+        coordinates: [40.0156, -83.0118],
+        media: [
+            { type: "image", src: "https://cdn.shopify.com/s/files/1/0839/0154/6770/files/F5g_uoeW8AA0jiH.jpg-large.jpg?v=1736550264", tour: "fall-2023", highlight: true },
+            { type: "video", src: "https://www.w3schools.com/html/mov_bbb.mp4", tour: "fall-2023", highlight: true }
+        ]
+    },
+    {
+        name: "OTTOBAR",
+        city: "Baltimore, MD",
+        coordinates: [39.3189, -76.6196],
+        media: [
+            { type: "image", src: "https://cdn.shopify.com/s/files/1/0839/0154/6770/files/F5g_uoeW8AA0jiH.jpg-large.jpg?v=1736550264", tour: "fall-2023", highlight: true },
+            { type: "video", src: "https://www.w3schools.com/html/mov_bbb.mp4", tour: "fall-2023", highlight: true }
+        ]
+    },
+    {
+        name: "AMOS' SOUTHEND",
+        city: "Charolette, NC",
+        coordinates: [35.2168, -80.8552],
+        media: [
+            { type: "image", src: "https://cdn.shopify.com/s/files/1/0839/0154/6770/files/F5g_uoeW8AA0jiH.jpg-large.jpg?v=1736550264", tour: "fall-2023", highlight: true },
+            { type: "video", src: "https://www.w3schools.com/html/mov_bbb.mp4", tour: "fall-2023", highlight: true }
+        ]
+    },
+    {
+        name: "THE MASQUERADE",
+        city: "Atlanta, GA",
+        coordinates: [33.7516, -84.3898],
+        media: [
+            { type: "image", src: "https://cdn.shopify.com/s/files/1/0839/0154/6770/files/F5g_uoeW8AA0jiH.jpg-large.jpg?v=1736550264", tour: "fall-2023", highlight: true },
+            { type: "video", src: "https://www.w3schools.com/html/mov_bbb.mp4", tour: "fall-2023", highlight: true }
+        ]
+    },
+    {
+        name: "LONE STAR ROOM",
+        city: "Dallas, TX",
+        coordinates: [32.7708, -96.7970],
+        media: [
+            { type: "image", src: "https://cdn.shopify.com/s/files/1/0839/0154/6770/files/F5g_uoeW8AA0jiH.jpg-large.jpg?v=1736550264", tour: "fall-2023", highlight: true },
+            { type: "video", src: "https://www.w3schools.com/html/mov_bbb.mp4", tour: "fall-2023", highlight: true }
+        ]
+    },
+    {
+        name: "PAPER TIGER",
+        city: "San Antonio, TX",
+        coordinates: [29.4486, -98.4876],
+        media: [
+            { type: "image", src: "https://cdn.shopify.com/s/files/1/0839/0154/6770/files/F5g_uoeW8AA0jiH.jpg-large.jpg?v=1736550264", tour: "fall-2023", highlight: true },
+            { type: "video", src: "https://www.w3schools.com/html/mov_bbb.mp4", tour: "fall-2023", highlight: true }
+        ]
+    },
+    {
+        name: "CRESCENT BALLROOM",
+        city: "Phoenix, AZ",
+        coordinates: [33.45177, -112.07684],
+        media: [
+            { type: "image", src: "https://cdn.shopify.com/s/files/1/0839/0154/6770/files/F5g_uoeW8AA0jiH.jpg-large.jpg?v=1736550264", tour: "fall-2023", highlight: true },
+            { type: "video", src: "https://www.w3schools.com/html/mov_bbb.mp4", tour: "fall-2023", highlight: true }
+        ]
+    },
+    {
+        name: "ECHOPLEX",
+        city: "Los Angeles, CA",
+        coordinates: [34.0776, -118.2605],
+        media: [
+            { type: "image", src: "https://cdn.shopify.com/s/files/1/0839/0154/6770/files/F5g_uoeW8AA0jiH.jpg-large.jpg?v=1736550264", tour: "fall-2023", highlight: true },
+            { type: "video", src: "https://www.w3schools.com/html/mov_bbb.mp4", tour: "fall-2023", highlight: true }
+        ]
+    },
+    {
+        name: "CHAIN REACTION",
+        city: "Anaheim, CA",
+        coordinates: [33.83, -117.94],
+        media: [
+            { type: "image", src: "https://cdn.shopify.com/s/files/1/0839/0154/6770/files/F5g_uoeW8AA0jiH.jpg-large.jpg?v=1736550264", tour: "fall-2023", highlight: true },
+            { type: "video", src: "https://www.w3schools.com/html/mov_bbb.mp4", tour: "fall-2023", highlight: true }
+        ]
+    },
+    {
+        name: "HARLOW'S",
+        city: "Sacramento, CA",
+        coordinates: [38.5739, -121.4702],
+        media: [
+            { type: "image", src: "https://cdn.shopify.com/s/files/1/0839/0154/6770/files/F5g_uoeW8AA0jiH.jpg-large.jpg?v=1736550264", tour: "fall-2023", highlight: true },
+            { type: "video", src: "https://www.w3schools.com/html/mov_bbb.mp4", tour: "fall-2023", highlight: true }
+        ]
+    },
+    {
+        name: "CORNERSTONE",
+        city: "Berkeley, CA",
+        coordinates: [37.8663, -122.2673],
+        media: [
+            { type: "image", src: "https://cdn.shopify.com/s/files/1/0839/0154/6770/files/F5g_uoeW8AA0jiH.jpg-large.jpg?v=1736550264", tour: "fall-2023", highlight: true },
+            { type: "video", src: "https://www.w3schools.com/html/mov_bbb.mp4", tour: "fall-2023", highlight: true }
+        ]
+    },
+    {
+        name: "EL CORAZON",
+        city: "Seattle, WA",
+        coordinates: [47.6188, -122.3293],
+        media: [
+            { type: "image", src: "https://cdn.shopify.com/s/files/1/0839/0154/6770/files/F5g_uoeW8AA0jiH.jpg-large.jpg?v=1736550264", tour: "fall-2023", highlight: true },
+            { type: "video", src: "https://www.w3schools.com/html/mov_bbb.mp4", tour: "fall-2023", highlight: true }
+        ]
+    },
+    {
+        name: "HAWTHORNE THEATER",
+        city: "Portland, OR",
+        coordinates: [45.5118, -122.6231],
+        media: [
+            { type: "image", src: "https://cdn.shopify.com/s/files/1/0839/0154/6770/files/F5g_uoeW8AA0jiH.jpg-large.jpg?v=1736550264", tour: "fall-2023", highlight: true },
+            { type: "video", src: "https://www.w3schools.com/html/mov_bbb.mp4", tour: "fall-2023", highlight: true }
+        ]
+    },
+    {
+        name: "SOUNDWELL",
+        city: "Salt Lake City, UT",
+        coordinates: [40.7646, -111.8957],
+        media: [
+            { type: "image", src: "https://cdn.shopify.com/s/files/1/0839/0154/6770/files/F5g_uoeW8AA0jiH.jpg-large.jpg?v=1736550264", tour: "fall-2023", highlight: true },
+            { type: "video", src: "https://www.w3schools.com/html/mov_bbb.mp4", tour: "fall-2023", highlight: true }
+        ]
+    },
+    {
+        name: "MARQUIS THEATER",
+        city: "Denver, CO",
+        coordinates: [40.7589, -73.9864],
+        media: [
+            { type: "image", src: "https://cdn.shopify.com/s/files/1/0839/0154/6770/files/F5g_uoeW8AA0jiH.jpg-large.jpg?v=1736550264", tour: "fall-2023", highlight: true },
+            { type: "video", src: "https://www.w3schools.com/html/mov_bbb.mp4", tour: "fall-2023", highlight: true }
+        ]
+    },
+    // JF | BRARINGS TOUR END
+    
   
-    // // 2024 Venues
-    // {
-    //   name: "Terminal 5 asdf",
-    //   city: "New York, NY",
-    //   coordinates: [40.7684, -73.9921],
-    //   media: [
-    //     { type: "image", src: "https://via.placeholder.com/800x600?text=Performance+Terminal+5", tour: "spring-2024", highlight: true },
-    //     { type: "video", src: "https://www.w3schools.com/html/movie.mp4", tour: "fall-2024" }
-    //   ]
-    // },
-    // {
-    //   name: "The Anthem",
-    //   city: "Washington, DC",
-    //   coordinates: [38.8807, -77.0219],
-    //   media: [
-    //     { type: "image", src: "https://via.placeholder.com/800x600?text=Performance+Anthem", tour: "summer-2024" },
-    //     { type: "video", src: "https://www.w3schools.com/html/mov_bbb.mp4", tour: "fall-2024", highlight: true }
-    //   ]
-    // },
-  
-    // 2025 Venues
-
-
+    // 2024 Venues
     // HOT MULLIGAN TOUR START
     {
         name: "BUFFALO RIVERWORKS",
