@@ -31,184 +31,483 @@ const map = L.map('map', {
         { type: "video", src: "https://www.w3schools.com/html/mov_bbb.mp4", tour: "fall-2017" }
       ]
     },
-    {
-      name: "First Avenue",
-      city: "Minneapolis, MN",
-      coordinates: [44.9797, -93.2760],
-      media: [
-        { type: "image", src: "https://via.placeholder.com/800x600?text=Performance+First+Ave", tour: "summer-2017" },
-        { type: "video", src: "https://www.w3schools.com/html/movie.mp4", tour: "fall-2017", highlight: true }
-      ]
-    },
+    // {
+    //   name: "First Avenue",
+    //   city: "Minneapolis, MN",
+    //   coordinates: [44.9797, -93.2760],
+    //   media: [
+    //     { type: "image", src: "https://via.placeholder.com/800x600?text=Performance+First+Ave", tour: "summer-2017" },
+    //     { type: "video", src: "https://www.w3schools.com/html/movie.mp4", tour: "fall-2017", highlight: true }
+    //   ]
+    // },
   
-    // 2018 Venues
-    {
-      name: "9:30 Club",
-      city: "Washington, DC",
-      coordinates: [38.9170, -77.0230],
-      media: [
-        { type: "image", src: "https://via.placeholder.com/800x600?text=Performance+930+Club", tour: "spring-2018", highlight: true },
-        { type: "video", src: "https://www.w3schools.com/html/movie.mp4", tour: "fall-2018" }
-      ]
-    },
-    {
-      name: "Paradise Rock Club",
-      city: "Boston, MA",
-      coordinates: [42.3519, -71.1193],
-      media: [
-        { type: "image", src: "https://via.placeholder.com/800x600?text=Performance+Paradise+Rock", tour: "spring-2018" },
-        { type: "image", src: "https://via.placeholder.com/800x600?text=Performance+Paradise+Fall", tour: "fall-2018", highlight: true }
-      ]
-    },
+    // // 2018 Venues
+    // {
+    //   name: "9:30 Club",
+    //   city: "Washington, DC",
+    //   coordinates: [38.9170, -77.0230],
+    //   media: [
+    //     { type: "image", src: "https://via.placeholder.com/800x600?text=Performance+930+Club", tour: "spring-2018", highlight: true },
+    //     { type: "video", src: "https://www.w3schools.com/html/movie.mp4", tour: "fall-2018" }
+    //   ]
+    // },
+    // {
+    //   name: "Paradise Rock Club",
+    //   city: "Boston, MA",
+    //   coordinates: [42.3519, -71.1193],
+    //   media: [
+    //     { type: "image", src: "https://via.placeholder.com/800x600?text=Performance+Paradise+Rock", tour: "spring-2018" },
+    //     { type: "image", src: "https://via.placeholder.com/800x600?text=Performance+Paradise+Fall", tour: "fall-2018", highlight: true }
+    //   ]
+    // },
   
-    // 2019 Venues
-    {
-      name: "The Metro",
-      city: "Chicago, IL",
-      coordinates: [41.9483, -87.6588],
-      media: [
-        { type: "image", src: "https://via.placeholder.com/800x600?text=Performance+Metro", tour: "summer-2019", highlight: true },
-        { type: "video", src: "https://www.w3schools.com/html/mov_bbb.mp4", tour: "fall-2019" }
-      ]
-    },
-    {
-      name: "Bowery Ballroom",
-      city: "New York, NY",
-      coordinates: [40.7203, -73.9939],
-      media: [
-        { type: "image", src: "https://via.placeholder.com/800x600?text=Performance+Bowery", tour: "spring-2019" },
-        { type: "video", src: "https://www.w3schools.com/html/movie.mp4", tour: "fall-2019", highlight: true }
-      ]
-    },
+    // // 2019 Venues
+    // {
+    //   name: "The Metro",
+    //   city: "Chicago, IL",
+    //   coordinates: [41.9483, -87.6588],
+    //   media: [
+    //     { type: "image", src: "https://via.placeholder.com/800x600?text=Performance+Metro", tour: "summer-2019", highlight: true },
+    //     { type: "video", src: "https://www.w3schools.com/html/mov_bbb.mp4", tour: "fall-2019" }
+    //   ]
+    // },
+    // {
+    //   name: "Bowery Ballroom",
+    //   city: "New York, NY",
+    //   coordinates: [40.7203, -73.9939],
+    //   media: [
+    //     { type: "image", src: "https://via.placeholder.com/800x600?text=Performance+Bowery", tour: "spring-2019" },
+    //     { type: "video", src: "https://www.w3schools.com/html/movie.mp4", tour: "fall-2019", highlight: true }
+    //   ]
+    // },
   
-    // 2020 Venues
-    {
-      name: "El Rey Theatre",
-      city: "Los Angeles, CA",
-      coordinates: [34.0625, -118.3499],
-      media: [
-        { type: "image", src: "https://via.placeholder.com/800x600?text=Performance+El+Rey", tour: "summer-2020", highlight: true },
-        { type: "video", src: "https://www.w3schools.com/html/movie.mp4", tour: "fall-2020" }
-      ]
-    },
-    {
-      name: "The Orange Peel",
-      city: "Asheville, NC",
-      coordinates: [35.5947, -82.5515],
-      media: [
-        { type: "image", src: "https://via.placeholder.com/800x600?text=Performance+Orange+Peel", tour: "spring-2020" },
-        { type: "video", src: "https://www.w3schools.com/html/mov_bbb.mp4", tour: "fall-2020", highlight: true }
-      ]
-    },
+    // // 2020 Venues
+    // {
+    //   name: "El Rey Theatre",
+    //   city: "Los Angeles, CA",
+    //   coordinates: [34.0625, -118.3499],
+    //   media: [
+    //     { type: "image", src: "https://via.placeholder.com/800x600?text=Performance+El+Rey", tour: "summer-2020", highlight: true },
+    //     { type: "video", src: "https://www.w3schools.com/html/movie.mp4", tour: "fall-2020" }
+    //   ]
+    // },
+    // {
+    //   name: "The Orange Peel",
+    //   city: "Asheville, NC",
+    //   coordinates: [35.5947, -82.5515],
+    //   media: [
+    //     { type: "image", src: "https://via.placeholder.com/800x600?text=Performance+Orange+Peel", tour: "spring-2020" },
+    //     { type: "video", src: "https://www.w3schools.com/html/mov_bbb.mp4", tour: "fall-2020", highlight: true }
+    //   ]
+    // },
   
-    // 2021 Venues
-    {
-      name: "Variety Playhouse",
-      city: "Atlanta, GA",
-      coordinates: [33.7655, -84.3498],
-      media: [
-        { type: "image", src: "https://via.placeholder.com/800x600?text=Performance+Variety", tour: "spring-2021", highlight: true },
-        { type: "video", src: "https://www.w3schools.com/html/movie.mp4", tour: "fall-2021" }
-      ]
-    },
-    {
-      name: "Brooklyn Steel",
-      city: "Brooklyn, NY",
-      coordinates: [40.7143, -73.9478],
-      media: [
-        { type: "image", src: "https://via.placeholder.com/800x600?text=Performance+Brooklyn+Steel", tour: "summer-2021" },
-        { type: "video", src: "https://www.w3schools.com/html/mov_bbb.mp4", tour: "fall-2021", highlight: true }
-      ]
-    },
+    // // 2021 Venues
+    // {
+    //   name: "Variety Playhouse",
+    //   city: "Atlanta, GA",
+    //   coordinates: [33.7655, -84.3498],
+    //   media: [
+    //     { type: "image", src: "https://via.placeholder.com/800x600?text=Performance+Variety", tour: "spring-2021", highlight: true },
+    //     { type: "video", src: "https://www.w3schools.com/html/movie.mp4", tour: "fall-2021" }
+    //   ]
+    // },
+    // {
+    //   name: "Brooklyn Steel",
+    //   city: "Brooklyn, NY",
+    //   coordinates: [40.7143, -73.9478],
+    //   media: [
+    //     { type: "image", src: "https://via.placeholder.com/800x600?text=Performance+Brooklyn+Steel", tour: "summer-2021" },
+    //     { type: "video", src: "https://www.w3schools.com/html/mov_bbb.mp4", tour: "fall-2021", highlight: true }
+    //   ]
+    // },
   
-    // 2022 Venues
-    {
-      name: "Ogden Theatre",
-      city: "Denver, CO",
-      coordinates: [39.7404, -104.9754],
-      media: [
-        { type: "image", src: "https://via.placeholder.com/800x600?text=Performance+Ogden", tour: "spring-2022", highlight: true },
-        { type: "video", src: "https://www.w3schools.com/html/movie.mp4", tour: "fall-2022" }
-      ]
-    },
-    {
-      name: "Thalia Hall",
-      city: "Chicago, IL",
-      coordinates: [41.8501, -87.6546],
-      media: [
-        { type: "image", src: "https://via.placeholder.com/800x600?text=Performance+Thalia+Hall", tour: "summer-2022" },
-        { type: "video", src: "https://www.w3schools.com/html/mov_bbb.mp4", tour: "fall-2022", highlight: true }
-      ]
-    },
+    // // 2022 Venues
+    // {
+    //   name: "Ogden Theatre",
+    //   city: "Denver, CO",
+    //   coordinates: [39.7404, -104.9754],
+    //   media: [
+    //     { type: "image", src: "https://via.placeholder.com/800x600?text=Performance+Ogden", tour: "spring-2022", highlight: true },
+    //     { type: "video", src: "https://www.w3schools.com/html/movie.mp4", tour: "fall-2022" }
+    //   ]
+    // },
+    // {
+    //   name: "Thalia Hall",
+    //   city: "Chicago, IL",
+    //   coordinates: [41.8501, -87.6546],
+    //   media: [
+    //     { type: "image", src: "https://via.placeholder.com/800x600?text=Performance+Thalia+Hall", tour: "summer-2022" },
+    //     { type: "video", src: "https://www.w3schools.com/html/mov_bbb.mp4", tour: "fall-2022", highlight: true }
+    //   ]
+    // },
   
-    // 2023 Venues
-    {
-      name: "Revolution Hall",
-      city: "Portland, OR",
-      coordinates: [45.5165, -122.6458],
-      media: [
-        { type: "image", src: "https://via.placeholder.com/800x600?text=Performance+Revolution", tour: "spring-2023", highlight: true },
-        { type: "video", src: "https://www.w3schools.com/html/movie.mp4", tour: "fall-2023" }
-      ]
-    },
-    {
-      name: "The Crescent Ballroom",
-      city: "Phoenix, AZ",
-      coordinates: [33.4522, -112.0738],
-      media: [
-        { type: "image", src: "https://via.placeholder.com/800x600?text=Performance+Crescent", tour: "summer-2023" },
-        { type: "video", src: "https://www.w3schools.com/html/mov_bbb.mp4", tour: "fall-2023", highlight: true }
-      ]
-    },
+    // // 2023 Venues
+    // {
+    //   name: "Revolution Hall",
+    //   city: "Portland, OR",
+    //   coordinates: [45.5165, -122.6458],
+    //   media: [
+    //     { type: "image", src: "https://via.placeholder.com/800x600?text=Performance+Revolution", tour: "spring-2023", highlight: true },
+    //     { type: "video", src: "https://www.w3schools.com/html/movie.mp4", tour: "fall-2023" }
+    //   ]
+    // },
+    // {
+    //   name: "The Crescent Ballroom",
+    //   city: "Phoenix, AZ",
+    //   coordinates: [33.4522, -112.0738],
+    //   media: [
+    //     { type: "image", src: "https://via.placeholder.com/800x600?text=Performance+Crescent", tour: "summer-2023" },
+    //     { type: "video", src: "https://www.w3schools.com/html/mov_bbb.mp4", tour: "fall-2023", highlight: true }
+    //   ]
+    // },
   
-    // 2024 Venues
-    {
-      name: "Terminal 5",
-      city: "New York, NY",
-      coordinates: [40.7684, -73.9921],
-      media: [
-        { type: "image", src: "https://via.placeholder.com/800x600?text=Performance+Terminal+5", tour: "spring-2024", highlight: true },
-        { type: "video", src: "https://www.w3schools.com/html/movie.mp4", tour: "fall-2024" }
-      ]
-    },
-    {
-      name: "The Anthem",
-      city: "Washington, DC",
-      coordinates: [38.8807, -77.0219],
-      media: [
-        { type: "image", src: "https://via.placeholder.com/800x600?text=Performance+Anthem", tour: "summer-2024" },
-        { type: "video", src: "https://www.w3schools.com/html/mov_bbb.mp4", tour: "fall-2024", highlight: true }
-      ]
-    },
+    // // 2024 Venues
+    // {
+    //   name: "Terminal 5 asdf",
+    //   city: "New York, NY",
+    //   coordinates: [40.7684, -73.9921],
+    //   media: [
+    //     { type: "image", src: "https://via.placeholder.com/800x600?text=Performance+Terminal+5", tour: "spring-2024", highlight: true },
+    //     { type: "video", src: "https://www.w3schools.com/html/movie.mp4", tour: "fall-2024" }
+    //   ]
+    // },
+    // {
+    //   name: "The Anthem",
+    //   city: "Washington, DC",
+    //   coordinates: [38.8807, -77.0219],
+    //   media: [
+    //     { type: "image", src: "https://via.placeholder.com/800x600?text=Performance+Anthem", tour: "summer-2024" },
+    //     { type: "video", src: "https://www.w3schools.com/html/mov_bbb.mp4", tour: "fall-2024", highlight: true }
+    //   ]
+    // },
   
     // 2025 Venues
+
+
+    // HOT MULLIGAN TOUR START
     {
-      name: "Mission Ballroom",
-      city: "Denver, CO",
-      coordinates: [39.7591, -104.9721],
-      media: [
-        { type: "image", src: "https://via.placeholder.com/800x600?text=Performance+Mission", tour: "spring-2025", highlight: true },
-        { type: "video", src: "https://www.w3schools.com/html/movie.mp4", tour: "fall-2025" }
-      ]
-    },
-    {
-        name: "House of Blues San Diego",
-        city: "San Diego, CA",
-        coordinates: [32.7545, -117.8633],
+        name: "BUFFALO RIVERWORKS",
+        city: "Buffalo, NY",
+        coordinates: [42.887691, -78.879372],
         media: [
-          { type: "image", src: "https://via.placeholder.com/800x600?text=Performance+Observatory", tour: "summer-2025" },
-          { type: "video", src: "https://www.w3schools.com/html/mov_bbb.mp4", tour: "fall-2025", highlight: true }
+        { type: "image", src: "https://www.brooklynvegan.com/wp-content/uploads/2023/12/11/hot-mulligan-2024-tour.jpeg", tour: "spring-2024", highlight: true },
         ]
     },
     {
-      name: "The Observatory",
-      city: "Santa Ana, CA",
-      coordinates: [33.7545, -117.8633],
+        name: "COLLEGE ST. MUSIC HALL",
+        city: "New Haven, CT",
+        coordinates: [41.303071, -72.931808],
+        media: [
+            { type: "image", src: "https://www.brooklynvegan.com/wp-content/uploads/2023/12/11/hot-mulligan-2024-tour.jpeg", tour: "spring-2024", highlight: true },
+        ]
+    },
+    {
+      name: "PALLADIUM",
+      city: "Worcester, MA",
+      coordinates: [42.2667, -71.8007],
       media: [
-        { type: "image", src: "https://via.placeholder.com/800x600?text=Performance+Observatory", tour: "fall-2018" },
-        { type: "video", src: "https://www.w3schools.com/html/mov_bbb.mp4", tour: "fall-2018", highlight: true }
+        { type: "image", src: "https://www.brooklynvegan.com/wp-content/uploads/2023/12/11/hot-mulligan-2024-tour.jpeg", tour: "spring-2024", highlight: true },
       ]
+    },
+    {
+        name: "ATLANTIC CITY CONV CENTER",
+        city: "Atlantic City, NJ",
+        coordinates: [39.3631, -74.4386],
+        media: [
+          { type: "image", src: "https://www.brooklynvegan.com/wp-content/uploads/2023/12/11/hot-mulligan-2024-tour.jpeg", tour: "spring-2024", highlight: true },
+        ]
+    },
+    {
+      name: "NORVA",
+      city: "Norfolk, VA",
+      coordinates: [36.8502, -76.2895],
+      media: [
+        { type: "image", src: "https://www.brooklynvegan.com/wp-content/uploads/2023/12/11/hot-mulligan-2024-tour.jpeg", tour: "spring-2024", highlight: true },
+      ]
+    },
+    {
+      name: "JANNUS LIVE",
+      city: "Tampa, FL",
+      coordinates: [27.7719, -82.6363],
+      media: [
+        { type: "image", src: "https://www.brooklynvegan.com/wp-content/uploads/2023/12/11/hot-mulligan-2024-tour.jpeg", tour: "spring-2024", highlight: true },
+        { type: "video", src: "https://www.w3schools.com/html/mov_bbb.mp4", tour: "spring-2024", highlight: true }
+      ]
+    },
+    {
+      name: "IRON CITY",
+      city: "Birmingham, AL",
+      coordinates: [33.51, -86.8],
+      media: [
+        { type: "image", src: "https://www.brooklynvegan.com/wp-content/uploads/2023/12/11/hot-mulligan-2024-tour.jpeg", tour: "spring-2024", highlight: true },
+        { type: "video", src: "https://www.w3schools.com/html/mov_bbb.mp4", tour: "spring-2024", highlight: true }
+      ]
+    },
+    {
+      name: "THE FACTORY",
+      city: "Dallas, TX",
+      coordinates: [32.4651, -96.471],
+      media: [
+        { type: "image", src: "https://www.brooklynvegan.com/wp-content/uploads/2023/12/11/hot-mulligan-2024-tour.jpeg", tour: "spring-2024", highlight: true },
+        { type: "video", src: "https://www.w3schools.com/html/mov_bbb.mp4", tour: "spring-2024", highlight: true }
+      ]
+    },
+    {
+      name: "AZTEC THEATER",
+      city: "San Antonio, TX",
+      coordinates: [29.424444, -98.490833],
+      media: [
+        { type: "image", src: "https://www.brooklynvegan.com/wp-content/uploads/2023/12/11/hot-mulligan-2024-tour.jpeg", tour: "spring-2024", highlight: true },
+        { type: "video", src: "https://www.w3schools.com/html/mov_bbb.mp4", tour: "spring-2024", highlight: true }
+      ]
+    },
+    {
+      name: "LOWBROW PALACE",
+      city: "El PASO, TX",
+      coordinates: [31.763608, -106.478578],
+      media: [
+        { type: "image", src: "https://www.brooklynvegan.com/wp-content/uploads/2023/12/11/hot-mulligan-2024-tour.jpeg", tour: "spring-2024", highlight: true },
+        { type: "video", src: "https://www.w3schools.com/html/mov_bbb.mp4", tour: "spring-2024", highlight: true }
+      ]
+    },
+    {
+        name: "HOUSE OF BLUES - ANAHEIM",
+        city: "Anaheim, CA",
+        coordinates: [33.81, -117.91],
+        media: [
+          { type: "image", src: "https://www.brooklynvegan.com/wp-content/uploads/2023/12/11/hot-mulligan-2024-tour.jpeg", tour: "spring-2024", highlight: true },
+          { type: "video", src: "https://www.w3schools.com/html/mov_bbb.mp4", tour: "spring-2024", highlight: true }
+        ]
+      },
+    {
+      name: "SOMA",
+      city: "San Diego, CA",
+      coordinates: [32.7546, -117.2089],
+      media: [
+        { type: "image", src: "https://www.brooklynvegan.com/wp-content/uploads/2023/12/11/hot-mulligan-2024-tour.jpeg", tour: "spring-2024", highlight: true },
+        { type: "video", src: "https://www.w3schools.com/html/mov_bbb.mp4", tour: "spring-2024", highlight: true }
+      ]
+    },
+    {
+      name: "UC THEATER",
+      city: "Berkeley, CA",
+      coordinates: [37.8718, -122.2698],
+      media: [
+        { type: "image", src: "https://www.brooklynvegan.com/wp-content/uploads/2023/12/11/hot-mulligan-2024-tour.jpeg", tour: "spring-2024", highlight: true },
+        { type: "video", src: "https://www.w3schools.com/html/mov_bbb.mp4", tour: "spring-2024", highlight: true }
+      ]
+    },
+    {
+      name: "BROOKLYN BOWL",
+      city: "Las Vegas, NV",
+      coordinates: [36.11756, -115.17061],
+      media: [
+        { type: "image", src: "https://www.brooklynvegan.com/wp-content/uploads/2023/12/11/hot-mulligan-2024-tour.jpeg", tour: "spring-2024", highlight: true },
+        { type: "video", src: "https://www.w3schools.com/html/mov_bbb.mp4", tour: "spring-2024", highlight: true }
+      ]
+    },
+    {
+      name: "BOULDER THEATER",
+      city: "Boulder, CO",
+      coordinates: [40.0192, -105.2774],
+      media: [
+        { type: "image", src: "https://www.brooklynvegan.com/wp-content/uploads/2023/12/11/hot-mulligan-2024-tour.jpeg", tour: "spring-2024", highlight: true },
+        { type: "video", src: "https://www.w3schools.com/html/mov_bbb.mp4", tour: "spring-2024", highlight: true }
+      ]
+    },
+    {
+      name: "UPTOWN THEATER",
+      city: "Kansas City, MO",
+      coordinates: [39.0610, -94.5907],
+      media: [
+        { type: "image", src: "https://www.brooklynvegan.com/wp-content/uploads/2023/12/11/hot-mulligan-2024-tour.jpeg", tour: "spring-2024", highlight: true },
+        { type: "video", src: "https://www.w3schools.com/html/mov_bbb.mp4", tour: "spring-2024", highlight: true }
+      ]
+    },
+    // HOT MULLIGAN TOUR END
+
+    // MICROWAVE TOUR START
+    {
+        name: "IRON CITY",
+        city: "Birmingham, AL",
+        coordinates: [33.51, -86.8],
+        media: [
+            { type: "image", src: "https://www.brooklynvegan.com/wp-content/uploads/2024/07/16/microwave-2024tour.jpg", tour: "fall-2024", highlight: true },
+            { type: "video", src: "https://www.w3schools.com/html/mov_bbb.mp4", tour: "fall-2024", highlight: true }
+        ]
+    },
+    {
+        name: "HOUSE OF BLUES - NEW ORLEANS",
+        city: "New Orleans, LA",
+        coordinates: [29.95326, -90.06613],
+        media: [
+        { type: "image", src: "https://www.brooklynvegan.com/wp-content/uploads/2024/07/16/microwave-2024tour.jpg", tour: "fall-2024", highlight: true },
+        { type: "video", src: "https://www.w3schools.com/html/mov_bbb.mp4", tour: "fall-2024", highlight: true }
+        ]
+    },
+    {
+        name: "PAPER TIGER",
+        city: "San Antonio, TX",
+        coordinates: [29.4486, -98.48756],
+        media: [
+        { type: "image", src: "https://www.brooklynvegan.com/wp-content/uploads/2024/07/16/microwave-2024tour.jpg", tour: "fall-2024", highlight: true },
+        { type: "video", src: "https://www.w3schools.com/html/mov_bbb.mp4", tour: "fall-2024", highlight: true }
+    ]
+    },
+    {
+        name: "Tulips",
+        city: "Fort Worth, TX",
+        coordinates: [32.74302, -97.32883],
+        media: [
+        { type: "image", src: "https://www.brooklynvegan.com/wp-content/uploads/2024/07/16/microwave-2024tour.jpg", tour: "fall-2024", highlight: true },
+        { type: "video", src: "https://www.w3schools.com/html/mov_bbb.mp4", tour: "fall-2024", highlight: true }
+        ]
+    },
+    {
+    name: "VANGUARD",
+    city: "Tulsa, OK",
+    coordinates: [36.1588, -95.9943],
+    media: [
+        { type: "image", src: "https://www.brooklynvegan.com/wp-content/uploads/2024/07/16/microwave-2024tour.jpg", tour: "fall-2024", highlight: true },
+        { type: "video", src: "https://www.w3schools.com/html/mov_bbb.mp4", tour: "fall-2024", highlight: true }
+    ]
+    },
+    {
+    name: "THE GRANADA",
+    city: "Lawrence, KS",
+    coordinates: [38.9648, -95.2356],
+    media: [
+        { type: "image", src: "https://www.brooklynvegan.com/wp-content/uploads/2024/07/16/microwave-2024tour.jpg", tour: "fall-2024", highlight: true },
+        { type: "video", src: "https://www.w3schools.com/html/mov_bbb.mp4", tour: "fall-2024", highlight: true }
+    ]
+    },
+    {
+    name: "DELMAR HALL",
+    city: "ST. LOUIS, MO",
+    coordinates: [38.6555, -90.2972],
+    media: [
+        { type: "image", src: "https://www.brooklynvegan.com/wp-content/uploads/2024/07/16/microwave-2024tour.jpg", tour: "fall-2024", highlight: true },
+        { type: "video", src: "https://www.w3schools.com/html/mov_bbb.mp4", tour: "fall-2024", highlight: true }
+    ]
+    },
+    {
+    name: "TURNER HALL",
+    city: "MILWAUKEE, IW",
+    coordinates: [40.1, -88.2],
+    media: [
+        { type: "image", src: "https://www.brooklynvegan.com/wp-content/uploads/2024/07/16/microwave-2024tour.jpg", tour: "fall-2024", highlight: true },
+        { type: "video", src: "https://www.w3schools.com/html/mov_bbb.mp4", tour: "fall-2024", highlight: true }
+    ]
+    },
+    {
+    name: "THE FORGE",
+    city: "Joilet, IL",
+    coordinates: [41.5277, -88.08226],
+    media: [
+        { type: "image", src: "https://www.brooklynvegan.com/wp-content/uploads/2024/07/16/microwave-2024tour.jpg", tour: "fall-2024", highlight: true },
+        { type: "video", src: "https://www.w3schools.com/html/mov_bbb.mp4", tour: "fall-2024", highlight: true }
+    ]
+    },
+    {
+    name: "ELEVATION",
+    city: "Grand Rapids, MI",
+    coordinates: [42.9599, -85.6742],
+    media: [
+        { type: "image", src: "https://www.brooklynvegan.com/wp-content/uploads/2024/07/16/microwave-2024tour.jpg", tour: "fall-2024", highlight: true },
+        { type: "video", src: "https://www.w3schools.com/html/mov_bbb.mp4", tour: "fall-2024", highlight: true }
+    ]
+    },
+    {
+        name: "DELUXE @ OLD NATIONAL",
+        city: "Indianpolois, IN",
+        coordinates: [39.7744, -86.1511],
+        media: [
+        { type: "image", src: "https://www.brooklynvegan.com/wp-content/uploads/2024/07/16/microwave-2024tour.jpg", tour: "fall-2024", highlight: true },
+        { type: "video", src: "https://www.w3schools.com/html/mov_bbb.mp4", tour: "fall-2024", highlight: true }
+        ]
+    },
+    {
+    name: "BOGARTS",
+    city: "Cincinatti, OH",
+    coordinates: [41.3959, -82.6510],
+    media: [
+        { type: "image", src: "https://www.brooklynvegan.com/wp-content/uploads/2024/07/16/microwave-2024tour.jpg", tour: "fall-2024", highlight: true },
+        { type: "video", src: "https://www.w3schools.com/html/mov_bbb.mp4", tour: "fall-2024", highlight: true }
+    ]
+    },
+    {
+    name: "DISTRICT MUSIC HALL",
+    city: "Norwalk, CT",
+    coordinates: [41.1170, -73.4140],
+    media: [
+        { type: "image", src: "https://www.brooklynvegan.com/wp-content/uploads/2024/07/16/microwave-2024tour.jpg", tour: "fall-2024", highlight: true },
+        { type: "video", src: "https://www.w3schools.com/html/mov_bbb.mp4", tour: "fall-2024", highlight: true }
+    ]
+    },
+    {
+    name: "ASBURY LANES",
+    city: "Asbury Park, NJ",
+    coordinates: [40.2232, -74.0019],
+    media: [
+        { type: "image", src: "https://www.brooklynvegan.com/wp-content/uploads/2024/07/16/microwave-2024tour.jpg", tour: "fall-2024", highlight: true },
+        { type: "video", src: "https://www.w3schools.com/html/mov_bbb.mp4", tour: "fall-2024", highlight: true }
+    ]
+    },
+    {
+    name: "MULCAHY'S",
+    city: "Wantagh, NY",
+    coordinates: [61.2052, -149.8778],
+    media: [
+        { type: "image", src: "https://www.brooklynvegan.com/wp-content/uploads/2024/07/16/microwave-2024tour.jpg", tour: "fall-2024", highlight: true },
+        { type: "video", src: "https://www.w3schools.com/html/mov_bbb.mp4", tour: "fall-2024", highlight: true }
+    ]
+    },
+    {
+    name: "THE RECHER",
+    city: "BALTIMORE, MD",
+    coordinates: [39.4009, -76.6021],
+    media: [
+        { type: "image", src: "https://www.brooklynvegan.com/wp-content/uploads/2024/07/16/microwave-2024tour.jpg", tour: "fall-2024", highlight: true },
+        { type: "video", src: "https://www.w3schools.com/html/mov_bbb.mp4", tour: "fall-2024", highlight: true }
+    ]
+    },
+    {
+    name: "CANAL CLUB",
+    city: "RICHMOND, VA",
+    coordinates: [37.5326, -77.4296],
+    media: [
+        { type: "image", src: "https://www.brooklynvegan.com/wp-content/uploads/2024/07/16/microwave-2024tour.jpg", tour: "fall-2024", highlight: true },
+        { type: "video", src: "https://www.w3schools.com/html/mov_bbb.mp4", tour: "fall-2024", highlight: true }
+    ]
+    },
+    {
+    name: "LINCOLN THEATER",
+    city: "RALEIGH, NC",
+    coordinates: [35.7739, -78.6374],
+    media: [
+        { type: "image", src: "https://www.brooklynvegan.com/wp-content/uploads/2024/07/16/microwave-2024tour.jpg", tour: "fall-2024", highlight: true },
+        { type: "video", src: "https://www.w3schools.com/html/mov_bbb.mp4", tour: "fall-2024", highlight: true }
+    ]
+    },
+    {
+    name: "MUSIC FARM",
+    city: "CHARLESTON, SC",
+    coordinates: [32.79019, -79.93833],
+    media: [
+        { type: "image", src: "https://www.brooklynvegan.com/wp-content/uploads/2024/07/16/microwave-2024tour.jpg", tour: "fall-2024", highlight: true },
+        { type: "video", src: "https://www.w3schools.com/html/mov_bbb.mp4", tour: "fall-2024", highlight: true }
+    ]
+    },
+    {
+    name: "THE BEACHAM",
+    city: "ORLANDO, FL",
+    coordinates: [28.5430, -81.3792],
+    media: [
+        { type: "image", src: "https://www.brooklynvegan.com/wp-content/uploads/2024/07/16/microwave-2024tour.jpg", tour: "fall-2024", highlight: true },
+        { type: "video", src: "https://www.w3schools.com/html/mov_bbb.mp4", tour: "fall-2024", highlight: true }
+    ]
     }
+    // MICROWAVE TOUR END
   ];
 
 const markers = [];
