@@ -21,128 +21,186 @@ const map = L.map('map', {
   }).addTo(map);
 
   const venues = [
-    // 2017 Venues
+
+    // 2022 Venues
+
+    // Spring JF Headliner Start
     {
-      name: "The Fillmore",
-      city: "San Francisco, CA",
-      coordinates: [37.7841, -122.4338],
-      media: [
-        { type: "image", src: "https://via.placeholder.com/800x600?text=Performance+Fillmore", tour: "summer-2017", highlight: true },
-        { type: "video", src: "https://www.w3schools.com/html/mov_bbb.mp4", tour: "fall-2017" }
-      ]
+        name: "CORNERSTONE",
+        city: "Berkeley, CA",
+        coordinates: [37.8663, -122.2673],
+        media: [
+            { type: "image", src: "https://cdn.shopify.com/s/files/1/0839/0154/6770/files/FDIe3bVVgAAXo8.jpg?v=1736552113", tour: "spring-2022", highlight: true },
+            { type: "video", src: "https://www.w3schools.com/html/mov_bbb.mp4", tour: "spring-2022", highlight: true }
+        ]
     },
-    // {
-    //   name: "First Avenue",
-    //   city: "Minneapolis, MN",
-    //   coordinates: [44.9797, -93.2760],
-    //   media: [
-    //     { type: "image", src: "https://via.placeholder.com/800x600?text=Performance+First+Ave", tour: "summer-2017" },
-    //     { type: "video", src: "https://www.w3schools.com/html/movie.mp4", tour: "fall-2017", highlight: true }
-    //   ]
-    // },
-  
-    // // 2018 Venues
-    // {
-    //   name: "9:30 Club",
-    //   city: "Washington, DC",
-    //   coordinates: [38.9170, -77.0230],
-    //   media: [
-    //     { type: "image", src: "https://via.placeholder.com/800x600?text=Performance+930+Club", tour: "spring-2018", highlight: true },
-    //     { type: "video", src: "https://www.w3schools.com/html/movie.mp4", tour: "fall-2018" }
-    //   ]
-    // },
-    // {
-    //   name: "Paradise Rock Club",
-    //   city: "Boston, MA",
-    //   coordinates: [42.3519, -71.1193],
-    //   media: [
-    //     { type: "image", src: "https://via.placeholder.com/800x600?text=Performance+Paradise+Rock", tour: "spring-2018" },
-    //     { type: "image", src: "https://via.placeholder.com/800x600?text=Performance+Paradise+Fall", tour: "fall-2018", highlight: true }
-    //   ]
-    // },
-  
-    // // 2019 Venues
-    // {
-    //   name: "The Metro",
-    //   city: "Chicago, IL",
-    //   coordinates: [41.9483, -87.6588],
-    //   media: [
-    //     { type: "image", src: "https://via.placeholder.com/800x600?text=Performance+Metro", tour: "summer-2019", highlight: true },
-    //     { type: "video", src: "https://www.w3schools.com/html/mov_bbb.mp4", tour: "fall-2019" }
-    //   ]
-    // },
-    // {
-    //   name: "Bowery Ballroom",
-    //   city: "New York, NY",
-    //   coordinates: [40.7203, -73.9939],
-    //   media: [
-    //     { type: "image", src: "https://via.placeholder.com/800x600?text=Performance+Bowery", tour: "spring-2019" },
-    //     { type: "video", src: "https://www.w3schools.com/html/movie.mp4", tour: "fall-2019", highlight: true }
-    //   ]
-    // },
-  
-    // // 2020 Venues
-    // {
-    //   name: "El Rey Theatre",
-    //   city: "Los Angeles, CA",
-    //   coordinates: [34.0625, -118.3499],
-    //   media: [
-    //     { type: "image", src: "https://via.placeholder.com/800x600?text=Performance+El+Rey", tour: "summer-2020", highlight: true },
-    //     { type: "video", src: "https://www.w3schools.com/html/movie.mp4", tour: "fall-2020" }
-    //   ]
-    // },
-    // {
-    //   name: "The Orange Peel",
-    //   city: "Asheville, NC",
-    //   coordinates: [35.5947, -82.5515],
-    //   media: [
-    //     { type: "image", src: "https://via.placeholder.com/800x600?text=Performance+Orange+Peel", tour: "spring-2020" },
-    //     { type: "video", src: "https://www.w3schools.com/html/mov_bbb.mp4", tour: "fall-2020", highlight: true }
-    //   ]
-    // },
-  
-    // // 2021 Venues
-    // {
-    //   name: "Variety Playhouse",
-    //   city: "Atlanta, GA",
-    //   coordinates: [33.7655, -84.3498],
-    //   media: [
-    //     { type: "image", src: "https://via.placeholder.com/800x600?text=Performance+Variety", tour: "spring-2021", highlight: true },
-    //     { type: "video", src: "https://www.w3schools.com/html/movie.mp4", tour: "fall-2021" }
-    //   ]
-    // },
-    // {
-    //   name: "Brooklyn Steel",
-    //   city: "Brooklyn, NY",
-    //   coordinates: [40.7143, -73.9478],
-    //   media: [
-    //     { type: "image", src: "https://via.placeholder.com/800x600?text=Performance+Brooklyn+Steel", tour: "summer-2021" },
-    //     { type: "video", src: "https://www.w3schools.com/html/mov_bbb.mp4", tour: "fall-2021", highlight: true }
-    //   ]
-    // },
-  
-    // // 2022 Venues
-    // {
-    //   name: "Ogden Theatre",
-    //   city: "Denver, CO",
-    //   coordinates: [39.7404, -104.9754],
-    //   media: [
-    //     { type: "image", src: "https://via.placeholder.com/800x600?text=Performance+Ogden", tour: "spring-2022", highlight: true },
-    //     { type: "video", src: "https://www.w3schools.com/html/movie.mp4", tour: "fall-2022" }
-    //   ]
-    // },
-    // {
-    //   name: "Thalia Hall",
-    //   city: "Chicago, IL",
-    //   coordinates: [41.8501, -87.6546],
-    //   media: [
-    //     { type: "image", src: "https://via.placeholder.com/800x600?text=Performance+Thalia+Hall", tour: "summer-2022" },
-    //     { type: "video", src: "https://www.w3schools.com/html/mov_bbb.mp4", tour: "fall-2022", highlight: true }
-    //   ]
-    // },
+    {
+        name: "THE ROXY",
+        city: "Los Angeles, CA",
+        coordinates: [34.0908, -118.3880],
+        media: [
+            { type: "image", src: "https://cdn.shopify.com/s/files/1/0839/0154/6770/files/FDIe3bVVgAAXo8.jpg?v=1736552113", tour: "spring-2022", highlight: true },
+            { type: "video", src: "https://www.w3schools.com/html/mov_bbb.mp4", tour: "spring-2022", highlight: true }
+        ]
+    },
+    {
+        name: "REBEL LOUNGE",
+        city: "Phoenix, AZ",
+        coordinates: [33.4945, -112.0321],
+        media: [
+            { type: "image", src: "https://cdn.shopify.com/s/files/1/0839/0154/6770/files/FDIe3bVVgAAXo8.jpg?v=1736552113", tour: "spring-2022", highlight: true },
+            { type: "video", src: "https://www.w3schools.com/html/mov_bbb.mp4", tour: "spring-2022", highlight: true }
+        ]
+    },,
+    {
+        name: "EMPIRE CONTROL ROOM",
+        city: "Austin, TX",
+        coordinates: [30.2674, -97.7361],
+        media: [
+            { type: "image", src: "https://cdn.shopify.com/s/files/1/0839/0154/6770/files/FDIe3bVVgAAXo8.jpg?v=1736552113", tour: "spring-2022", highlight: true },
+            { type: "video", src: "https://www.w3schools.com/html/mov_bbb.mp4", tour: "spring-2022", highlight: true }
+        ]
+    },,
+    {
+        name: "Three Links",
+        city: "Dallas, TX",
+        coordinates: [32.7844, -96.7845],
+        media: [
+            { type: "image", src: "https://cdn.shopify.com/s/files/1/0839/0154/6770/files/FDIe3bVVgAAXo8.jpg?v=1736552113", tour: "spring-2022", highlight: true },
+            { type: "video", src: "https://www.w3schools.com/html/mov_bbb.mp4", tour: "spring-2022", highlight: true }
+        ]
+    },,
+    {
+        name: "SOUNDBAR",
+        city: "Orlando, FL",
+        coordinates: [28.5414, -81.3800],
+        media: [
+            { type: "image", src: "https://cdn.shopify.com/s/files/1/0839/0154/6770/files/FDIe3bVVgAAXo8.jpg?v=1736552113", tour: "spring-2022", highlight: true },
+            { type: "video", src: "https://www.w3schools.com/html/mov_bbb.mp4", tour: "spring-2022", highlight: true }
+        ]
+    },,
+    {
+        name: "CROWBAR",
+        city: "Tampa, FL",
+        coordinates: [27.9608, -82.4406],
+        media: [
+            { type: "image", src: "https://cdn.shopify.com/s/files/1/0839/0154/6770/files/FDIe3bVVgAAXo8.jpg?v=1736552113", tour: "spring-2022", highlight: true },
+            { type: "video", src: "https://www.w3schools.com/html/mov_bbb.mp4", tour: "spring-2022", highlight: true }
+        ]
+    },,
+    {
+        name: "THE MASQUERADE",
+        city: "Atlanta, GA",
+        coordinates: [33.7516, -84.3898],
+        media: [
+            { type: "image", src: "https://cdn.shopify.com/s/files/1/0839/0154/6770/files/FDIe3bVVgAAXo8.jpg?v=1736552113", tour: "spring-2022", highlight: true },
+            { type: "video", src: "https://www.w3schools.com/html/mov_bbb.mp4", tour: "spring-2022", highlight: true }
+        ]
+    },,
+    {
+        name: "Songbyrd",
+        city: "Washington, DC",
+        coordinates: [38.9102, -76.9965],
+        media: [
+            { type: "image", src: "https://cdn.shopify.com/s/files/1/0839/0154/6770/files/FDIe3bVVgAAXo8.jpg?v=1736552113", tour: "spring-2022", highlight: true },
+            { type: "video", src: "https://www.w3schools.com/html/mov_bbb.mp4", tour: "spring-2022", highlight: true }
+        ]
+    },,
+    {
+        name: "HOUSE OF INDEPENDENTS",
+        city: "Asbury Park, NJ",
+        coordinates: [40.2160, -74.0098],
+        media: [
+            { type: "image", src: "https://cdn.shopify.com/s/files/1/0839/0154/6770/files/FDIe3bVVgAAXo8.jpg?v=1736552113", tour: "spring-2022", highlight: true },
+            { type: "video", src: "https://www.w3schools.com/html/mov_bbb.mp4", tour: "spring-2022", highlight: true }
+        ]
+    },,
+    {
+        name: "FIRST UNITARIAN CHURCH",
+        city: "Philadelphia, PA",
+        coordinates: [39.95273, -75.17651],
+        media: [
+            { type: "image", src: "https://cdn.shopify.com/s/files/1/0839/0154/6770/files/FDIe3bVVgAAXo8.jpg?v=1736552113", tour: "spring-2022", highlight: true },
+            { type: "video", src: "https://www.w3schools.com/html/mov_bbb.mp4", tour: "spring-2022", highlight: true }
+        ]
+    },,
+    {
+        name: "KNITTING FACTORY",
+        city: "Brooklyn, NY",
+        coordinates: [40.7142, -73.9558],
+        media: [
+            { type: "image", src: "https://cdn.shopify.com/s/files/1/0839/0154/6770/files/FDIe3bVVgAAXo8.jpg?v=1736552113", tour: "spring-2022", highlight: true },
+            { type: "video", src: "https://www.w3schools.com/html/mov_bbb.mp4", tour: "spring-2022", highlight: true }
+        ]
+    },,
+    {
+        name: "CRYSTAL BALLROOM",
+        city: "Boston, MA",
+        coordinates: [42.39665, -71.12300],
+        media: [
+            { type: "image", src: "https://cdn.shopify.com/s/files/1/0839/0154/6770/files/FDIe3bVVgAAXo8.jpg?v=1736552113", tour: "spring-2022", highlight: true },
+            { type: "video", src: "https://www.w3schools.com/html/mov_bbb.mp4", tour: "spring-2022", highlight: true }
+        ]
+    },,
+    {
+        name: "AMITYVILLE MUSIC HALL",
+        city: "Amityville, NY",
+        coordinates: [40.67899, -73.41754],
+        media: [
+            { type: "image", src: "https://cdn.shopify.com/s/files/1/0839/0154/6770/files/FDIe3bVVgAAXo8.jpg?v=1736552113", tour: "spring-2022", highlight: true },
+            { type: "video", src: "https://www.w3schools.com/html/mov_bbb.mp4", tour: "spring-2022", highlight: true }
+        ]
+    },,
+    {
+        name: "CRAFTHOUSE",
+        city: "Pittsburgh, PA",
+        coordinates: [40.3499, -79.9962],
+        media: [
+            { type: "image", src: "https://cdn.shopify.com/s/files/1/0839/0154/6770/files/FDIe3bVVgAAXo8.jpg?v=1736552113", tour: "spring-2022", highlight: true },
+            { type: "video", src: "https://www.w3schools.com/html/mov_bbb.mp4", tour: "spring-2022", highlight: true }
+        ]
+    },,
+    {
+        name: "MAHALL'S",
+        city: "Lakewood, OH",
+        coordinates: [41.4771, -81.7812],
+        media: [
+            { type: "image", src: "https://cdn.shopify.com/s/files/1/0839/0154/6770/files/FDIe3bVVgAAXo8.jpg?v=1736552113", tour: "spring-2022", highlight: true },
+            { type: "video", src: "https://www.w3schools.com/html/mov_bbb.mp4", tour: "spring-2022", highlight: true }
+        ]
+    },,
+    {
+        name: "THE SANCTUARY",
+        city: "Detroit, MI",
+        coordinates: [42.39985, -83.05893],
+        media: [
+            { type: "image", src: "https://cdn.shopify.com/s/files/1/0839/0154/6770/files/FDIe3bVVgAAXo8.jpg?v=1736552113", tour: "spring-2022", highlight: true },
+            { type: "video", src: "https://www.w3schools.com/html/mov_bbb.mp4", tour: "spring-2022", highlight: true }
+        ]
+    },,
+    {
+        name: "COBRA LOUNGE",
+        city: "Chicago, IL",
+        coordinates: [41.8863, -87.6667],
+        media: [
+            { type: "image", src: "https://cdn.shopify.com/s/files/1/0839/0154/6770/files/FDIe3bVVgAAXo8.jpg?v=1736552113", tour: "spring-2022", highlight: true },
+            { type: "video", src: "https://www.w3schools.com/html/mov_bbb.mp4", tour: "spring-2022", highlight: true }
+        ]
+    },,
+    {
+        name: "LARIMER LOUNGE",
+        city: "Denver, CO",
+        coordinates: [39.7600, -104.9838],
+        media: [
+            { type: "image", src: "https://cdn.shopify.com/s/files/1/0839/0154/6770/files/FDIe3bVVgAAXo8.jpg?v=1736552113", tour: "spring-2022", highlight: true },
+            { type: "video", src: "https://www.w3schools.com/html/mov_bbb.mp4", tour: "spring-2022", highlight: true }
+        ]
+    },
+    // Spring JF Headliner END
+
   
     // 2023 Venues
-    // JF | BEARINGS TOUR 
+    // JF | BEARINGS TOUR START
     {
         name: "RIOT FEST",
         city: "Chicago, IL",
@@ -368,7 +426,7 @@ const map = L.map('map', {
             { type: "video", src: "https://www.w3schools.com/html/mov_bbb.mp4", tour: "fall-2023", highlight: true }
         ]
     },
-    // JF | BRARINGS TOUR END
+    // JF | BEARINGS TOUR END
     
   
     // 2024 Venues
@@ -644,7 +702,7 @@ const map = L.map('map', {
     {
     name: "MULCAHY'S",
     city: "Wantagh, NY",
-    coordinates: [61.2052, -149.8778],
+    coordinates: [40.6725, -73.5099],
     media: [
         { type: "image", src: "https://www.brooklynvegan.com/wp-content/uploads/2024/07/16/microwave-2024tour.jpg", tour: "fall-2024", highlight: true },
         { type: "video", src: "https://www.w3schools.com/html/mov_bbb.mp4", tour: "fall-2024", highlight: true }
