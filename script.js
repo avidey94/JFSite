@@ -51,7 +51,7 @@ const map = L.map('map', {
             { type: "image", src: "https://cdn.shopify.com/s/files/1/0839/0154/6770/files/FDIe3bVVgAAXo8.jpg?v=1736552113", tour: "spring-2022", highlight: true },
             { type: "video", src: "https://www.w3schools.com/html/mov_bbb.mp4", tour: "spring-2022", highlight: true }
         ]
-    },,
+    },
     {
         name: "EMPIRE CONTROL ROOM",
         city: "Austin, TX",
@@ -60,7 +60,7 @@ const map = L.map('map', {
             { type: "image", src: "https://cdn.shopify.com/s/files/1/0839/0154/6770/files/FDIe3bVVgAAXo8.jpg?v=1736552113", tour: "spring-2022", highlight: true },
             { type: "video", src: "https://www.w3schools.com/html/mov_bbb.mp4", tour: "spring-2022", highlight: true }
         ]
-    },,
+    },
     {
         name: "Three Links",
         city: "Dallas, TX",
@@ -69,7 +69,7 @@ const map = L.map('map', {
             { type: "image", src: "https://cdn.shopify.com/s/files/1/0839/0154/6770/files/FDIe3bVVgAAXo8.jpg?v=1736552113", tour: "spring-2022", highlight: true },
             { type: "video", src: "https://www.w3schools.com/html/mov_bbb.mp4", tour: "spring-2022", highlight: true }
         ]
-    },,
+    },
     {
         name: "SOUNDBAR",
         city: "Orlando, FL",
@@ -78,7 +78,7 @@ const map = L.map('map', {
             { type: "image", src: "https://cdn.shopify.com/s/files/1/0839/0154/6770/files/FDIe3bVVgAAXo8.jpg?v=1736552113", tour: "spring-2022", highlight: true },
             { type: "video", src: "https://www.w3schools.com/html/mov_bbb.mp4", tour: "spring-2022", highlight: true }
         ]
-    },,
+    },
     {
         name: "CROWBAR",
         city: "Tampa, FL",
@@ -87,7 +87,7 @@ const map = L.map('map', {
             { type: "image", src: "https://cdn.shopify.com/s/files/1/0839/0154/6770/files/FDIe3bVVgAAXo8.jpg?v=1736552113", tour: "spring-2022", highlight: true },
             { type: "video", src: "https://www.w3schools.com/html/mov_bbb.mp4", tour: "spring-2022", highlight: true }
         ]
-    },,
+    },
     {
         name: "THE MASQUERADE",
         city: "Atlanta, GA",
@@ -96,7 +96,7 @@ const map = L.map('map', {
             { type: "image", src: "https://cdn.shopify.com/s/files/1/0839/0154/6770/files/FDIe3bVVgAAXo8.jpg?v=1736552113", tour: "spring-2022", highlight: true },
             { type: "video", src: "https://www.w3schools.com/html/mov_bbb.mp4", tour: "spring-2022", highlight: true }
         ]
-    },,
+    },
     {
         name: "Songbyrd",
         city: "Washington, DC",
@@ -105,7 +105,7 @@ const map = L.map('map', {
             { type: "image", src: "https://cdn.shopify.com/s/files/1/0839/0154/6770/files/FDIe3bVVgAAXo8.jpg?v=1736552113", tour: "spring-2022", highlight: true },
             { type: "video", src: "https://www.w3schools.com/html/mov_bbb.mp4", tour: "spring-2022", highlight: true }
         ]
-    },,
+    },
     {
         name: "HOUSE OF INDEPENDENTS",
         city: "Asbury Park, NJ",
@@ -114,7 +114,7 @@ const map = L.map('map', {
             { type: "image", src: "https://cdn.shopify.com/s/files/1/0839/0154/6770/files/FDIe3bVVgAAXo8.jpg?v=1736552113", tour: "spring-2022", highlight: true },
             { type: "video", src: "https://www.w3schools.com/html/mov_bbb.mp4", tour: "spring-2022", highlight: true }
         ]
-    },,
+    },
     {
         name: "FIRST UNITARIAN CHURCH",
         city: "Philadelphia, PA",
@@ -123,7 +123,7 @@ const map = L.map('map', {
             { type: "image", src: "https://cdn.shopify.com/s/files/1/0839/0154/6770/files/FDIe3bVVgAAXo8.jpg?v=1736552113", tour: "spring-2022", highlight: true },
             { type: "video", src: "https://www.w3schools.com/html/mov_bbb.mp4", tour: "spring-2022", highlight: true }
         ]
-    },,
+    },
     {
         name: "KNITTING FACTORY",
         city: "Brooklyn, NY",
@@ -132,7 +132,7 @@ const map = L.map('map', {
             { type: "image", src: "https://cdn.shopify.com/s/files/1/0839/0154/6770/files/FDIe3bVVgAAXo8.jpg?v=1736552113", tour: "spring-2022", highlight: true },
             { type: "video", src: "https://www.w3schools.com/html/mov_bbb.mp4", tour: "spring-2022", highlight: true }
         ]
-    },,
+    },
     {
         name: "CRYSTAL BALLROOM",
         city: "Boston, MA",
@@ -141,7 +141,7 @@ const map = L.map('map', {
             { type: "image", src: "https://cdn.shopify.com/s/files/1/0839/0154/6770/files/FDIe3bVVgAAXo8.jpg?v=1736552113", tour: "spring-2022", highlight: true },
             { type: "video", src: "https://www.w3schools.com/html/mov_bbb.mp4", tour: "spring-2022", highlight: true }
         ]
-    },,
+    },
     {
         name: "AMITYVILLE MUSIC HALL",
         city: "Amityville, NY",
@@ -150,7 +150,7 @@ const map = L.map('map', {
             { type: "image", src: "https://cdn.shopify.com/s/files/1/0839/0154/6770/files/FDIe3bVVgAAXo8.jpg?v=1736552113", tour: "spring-2022", highlight: true },
             { type: "video", src: "https://www.w3schools.com/html/mov_bbb.mp4", tour: "spring-2022", highlight: true }
         ]
-    },,
+    },
     {
         name: "CRAFTHOUSE",
         city: "Pittsburgh, PA",
@@ -159,7 +159,7 @@ const map = L.map('map', {
             { type: "image", src: "https://cdn.shopify.com/s/files/1/0839/0154/6770/files/FDIe3bVVgAAXo8.jpg?v=1736552113", tour: "spring-2022", highlight: true },
             { type: "video", src: "https://www.w3schools.com/html/mov_bbb.mp4", tour: "spring-2022", highlight: true }
         ]
-    },,
+    },
     {
         name: "MAHALL'S",
         city: "Lakewood, OH",
@@ -168,7 +168,7 @@ const map = L.map('map', {
             { type: "image", src: "https://cdn.shopify.com/s/files/1/0839/0154/6770/files/FDIe3bVVgAAXo8.jpg?v=1736552113", tour: "spring-2022", highlight: true },
             { type: "video", src: "https://www.w3schools.com/html/mov_bbb.mp4", tour: "spring-2022", highlight: true }
         ]
-    },,
+    },
     {
         name: "THE SANCTUARY",
         city: "Detroit, MI",
@@ -177,7 +177,7 @@ const map = L.map('map', {
             { type: "image", src: "https://cdn.shopify.com/s/files/1/0839/0154/6770/files/FDIe3bVVgAAXo8.jpg?v=1736552113", tour: "spring-2022", highlight: true },
             { type: "video", src: "https://www.w3schools.com/html/mov_bbb.mp4", tour: "spring-2022", highlight: true }
         ]
-    },,
+    },
     {
         name: "COBRA LOUNGE",
         city: "Chicago, IL",
@@ -186,7 +186,7 @@ const map = L.map('map', {
             { type: "image", src: "https://cdn.shopify.com/s/files/1/0839/0154/6770/files/FDIe3bVVgAAXo8.jpg?v=1736552113", tour: "spring-2022", highlight: true },
             { type: "video", src: "https://www.w3schools.com/html/mov_bbb.mp4", tour: "spring-2022", highlight: true }
         ]
-    },,
+    },
     {
         name: "LARIMER LOUNGE",
         city: "Denver, CO",
@@ -197,6 +197,208 @@ const map = L.map('map', {
         ]
     },
     // Spring JF Headliner END
+
+    // Fall 2022 MOM JEANS TOUR START
+    {
+        name: "THE COMPLEX",
+        city: "Salt Lake City, UT",
+        coordinates: [40.7677, -111.9066],
+        media: [
+            { type: "image", src: "https://cdn.shopify.com/s/files/1/0839/0154/6770/files/attachment-momjeans-2022tour.jpg?v=1736553771", tour: "fall-2022", highlight: true },
+            { type: "video", src: "https://www.w3schools.com/html/mov_bbb.mp4", tour: "fall-2022", highlight: true }
+        ]
+    },
+    {
+        name: "OGDEN THEATER",
+        city: "Denver, CO",
+        coordinates: [39.7402, -104.9753],
+        media: [
+            { type: "image", src: "https://cdn.shopify.com/s/files/1/0839/0154/6770/files/attachment-momjeans-2022tour.jpg?v=1736553771", tour: "fall-2022", highlight: true },
+            { type: "video", src: "https://www.w3schools.com/html/mov_bbb.mp4", tour: "fall-2022", highlight: true }
+        ]
+    },
+    {
+        name: "ST. ANDREWS HALL",
+        city: "Detroit, MI",
+        coordinates: [42.3322, -83.0415],
+        media: [
+            { type: "image", src: "https://cdn.shopify.com/s/files/1/0839/0154/6770/files/attachment-momjeans-2022tour.jpg?v=1736553771", tour: "fall-2022", highlight: true },
+            { type: "video", src: "https://www.w3schools.com/html/mov_bbb.mp4", tour: "fall-2022", highlight: true }
+        ]
+    },
+    {
+        name: "House of Blues",
+        city: "Cleveland, OH",
+        coordinates: [41.5, -81.69],
+        media: [
+            { type: "image", src: "https://cdn.shopify.com/s/files/1/0839/0154/6770/files/attachment-momjeans-2022tour.jpg?v=1736553771", tour: "fall-2022", highlight: true },
+            { type: "video", src: "https://www.w3schools.com/html/mov_bbb.mp4", tour: "fall-2022", highlight: true }
+        ]
+    },
+    {
+        name: "PHOENIX CONCERT THEATER",
+        city: "Toronto, ON",
+        coordinates: [43.66461, -79.37412],
+        media: [
+            { type: "image", src: "https://cdn.shopify.com/s/files/1/0839/0154/6770/files/attachment-momjeans-2022tour.jpg?v=1736553771", tour: "fall-2022", highlight: true },
+            { type: "video", src: "https://www.w3schools.com/html/mov_bbb.mp4", tour: "fall-2022", highlight: true }
+        ]
+    },
+    {
+        name: "BALTIMORE SOUNDSTAGE",
+        city: "Baltimore, MD",
+        coordinates: [39.2876, -76.6071],
+        media: [
+            { type: "image", src: "https://cdn.shopify.com/s/files/1/0839/0154/6770/files/attachment-momjeans-2022tour.jpg?v=1736553771", tour: "fall-2022", highlight: true },
+            { type: "video", src: "https://www.w3schools.com/html/mov_bbb.mp4", tour: "fall-2022", highlight: true }
+        ]
+    },
+    {
+        name: "HOUSE OF BLUES",
+        city: "Boston, MA",
+        coordinates: [42.34734, -71.0955],
+        media: [
+            { type: "image", src: "https://cdn.shopify.com/s/files/1/0839/0154/6770/files/attachment-momjeans-2022tour.jpg?v=1736553771", tour: "fall-2022", highlight: true },
+            { type: "video", src: "https://www.w3schools.com/html/mov_bbb.mp4", tour: "fall-2022", highlight: true }
+        ]
+    },
+    {
+        name: "Irving Plaza",
+        city: "NYC, NY",
+        coordinates: [40.7349, -73.9884],
+        media: [
+            { type: "image", src: "https://cdn.shopify.com/s/files/1/0839/0154/6770/files/attachment-momjeans-2022tour.jpg?v=1736553771", tour: "fall-2022", highlight: true },
+            { type: "video", src: "https://www.w3schools.com/html/mov_bbb.mp4", tour: "fall-2022", highlight: true }
+        ]
+    },
+    {
+        name: "RIOT FEST",
+        city: "Chicago, IL",
+        coordinates: [41.8623, -87.6995],
+        media: [
+            { type: "image", src: "https://cdn.shopify.com/s/files/1/0839/0154/6770/files/attachment-momjeans-2022tour.jpg?v=1736553771", tour: "fall-2022", highlight: true },
+            { type: "video", src: "https://www.w3schools.com/html/mov_bbb.mp4", tour: "fall-2022", highlight: true }
+        ]
+    },
+    {
+        name: "THE ATHEANAEUM THEATER",
+        city: "Columbus, OH",
+        coordinates: [41.94, -87.66],
+        media: [
+            { type: "image", src: "https://cdn.shopify.com/s/files/1/0839/0154/6770/files/attachment-momjeans-2022tour.jpg?v=1736553771", tour: "fall-2022", highlight: true },
+            { type: "video", src: "https://www.w3schools.com/html/mov_bbb.mp4", tour: "fall-2022", highlight: true }
+        ]
+    },
+    {
+        name: "AMOS' SOUTHEND",
+        city: "Charolette, NC",
+        coordinates: [35.2168, -80.8552],
+        media: [
+            { type: "image", src: "https://cdn.shopify.com/s/files/1/0839/0154/6770/files/attachment-momjeans-2022tour.jpg?v=1736553771", tour: "fall-2022", highlight: true },
+            { type: "video", src: "https://www.w3schools.com/html/mov_bbb.mp4", tour: "fall-2022", highlight: true }
+        ]
+    },
+    {
+        name: "THE MASQUERADE",
+        city: "Atlanta, GA",
+        coordinates: [33.7516, -84.3898],
+        media: [
+            { type: "image", src: "https://cdn.shopify.com/s/files/1/0839/0154/6770/files/attachment-momjeans-2022tour.jpg?v=1736553771", tour: "fall-2022", highlight: true },
+            { type: "video", src: "https://www.w3schools.com/html/mov_bbb.mp4", tour: "fall-2022", highlight: true }
+        ]
+    },
+    {
+        name: "THE BEACHAM",
+        city: "Orlando, FL",
+        coordinates: [28.5430, -81.3792],
+        media: [
+            { type: "image", src: "https://cdn.shopify.com/s/files/1/0839/0154/6770/files/attachment-momjeans-2022tour.jpg?v=1736553771", tour: "fall-2022", highlight: true },
+            { type: "video", src: "https://www.w3schools.com/html/mov_bbb.mp4", tour: "fall-2022", highlight: true }
+        ]
+    },
+    {
+        name: "EASTSIDE BOWL",
+        city: "Nashville, TN",
+        coordinates: [36.2383, -86.7183],
+        media: [
+            { type: "image", src: "https://cdn.shopify.com/s/files/1/0839/0154/6770/files/attachment-momjeans-2022tour.jpg?v=1736553771", tour: "fall-2022", highlight: true },
+            { type: "video", src: "https://www.w3schools.com/html/mov_bbb.mp4", tour: "fall-2022", highlight: true }
+        ]
+    },
+    {
+        name: "RISE ROOFTOP",
+        city: "Houston, TX",
+        coordinates: [36.2383, -86.7183],
+        media: [
+            { type: "image", src: "https://cdn.shopify.com/s/files/1/0839/0154/6770/files/attachment-momjeans-2022tour.jpg?v=1736553771", tour: "fall-2022", highlight: true },
+            { type: "video", src: "https://www.w3schools.com/html/mov_bbb.mp4", tour: "fall-2022", highlight: true }
+        ]
+    },
+    {
+        name: "SOUTH SIDE MUSIC HALL",
+        city: "Dallas, TX",
+        coordinates: [32.7687, -96.7975],
+        media: [
+            { type: "image", src: "https://cdn.shopify.com/s/files/1/0839/0154/6770/files/attachment-momjeans-2022tour.jpg?v=1736553771", tour: "fall-2022", highlight: true },
+            { type: "video", src: "https://www.w3schools.com/html/mov_bbb.mp4", tour: "fall-2022", highlight: true }
+        ]
+    },
+    {
+        name: "PAPER TIGER",
+        city: "San Antonio, TX",
+        coordinates: [29.4486, -98.48756],
+        media: [
+            { type: "image", src: "https://cdn.shopify.com/s/files/1/0839/0154/6770/files/attachment-momjeans-2022tour.jpg?v=1736553771", tour: "fall-2022", highlight: true },
+            { type: "video", src: "https://www.w3schools.com/html/mov_bbb.mp4", tour: "fall-2022", highlight: true }
+        ]
+    },
+    {
+        name: "THE NILE",
+        city: "Mesa, AZ",
+        coordinates: [33.4148, -111.8345],
+        media: [
+            { type: "image", src: "https://cdn.shopify.com/s/files/1/0839/0154/6770/files/attachment-momjeans-2022tour.jpg?v=1736553771", tour: "fall-2022", highlight: true },
+            { type: "video", src: "https://www.w3schools.com/html/mov_bbb.mp4", tour: "fall-2022", highlight: true }
+        ]
+    },
+    {
+        name: "THE BELASCO",
+        city: "Los Angeles, LA",
+        coordinates: [34.0403, -118.2594],
+        media: [
+            { type: "image", src: "https://cdn.shopify.com/s/files/1/0839/0154/6770/files/attachment-momjeans-2022tour.jpg?v=1736553771", tour: "fall-2022", highlight: true },
+            { type: "video", src: "https://www.w3schools.com/html/mov_bbb.mp4", tour: "fall-2022", highlight: true }
+        ]
+    },
+    {
+        name: "HOUSE OF BLUES",
+        city: "San Diego, CA",
+        coordinates: [32.71646, -117.15999],
+        media: [
+            { type: "image", src: "https://cdn.shopify.com/s/files/1/0839/0154/6770/files/attachment-momjeans-2022tour.jpg?v=1736553771", tour: "fall-2022", highlight: true },
+            { type: "video", src: "https://www.w3schools.com/html/mov_bbb.mp4", tour: "fall-2022", highlight: true }
+        ]
+    },
+    {
+        name: "HOUSE OF BLUES",
+        city: "Anaheim, CA",
+        coordinates: [33.80633, -117.91177],
+        media: [
+            { type: "image", src: "https://cdn.shopify.com/s/files/1/0839/0154/6770/files/attachment-momjeans-2022tour.jpg?v=1736553771", tour: "fall-2022", highlight: true },
+            { type: "video", src: "https://www.w3schools.com/html/mov_bbb.mp4", tour: "fall-2022", highlight: true }
+        ]
+    },
+    {
+        name: "THE UC THEATER",
+        city: "Berkeley, CA",
+        coordinates: [37.8718, -122.2698],
+        media: [
+            { type: "image", src: "https://cdn.shopify.com/s/files/1/0839/0154/6770/files/attachment-momjeans-2022tour.jpg?v=1736553771", tour: "fall-2022", highlight: true },
+            { type: "video", src: "https://www.w3schools.com/html/mov_bbb.mp4", tour: "fall-2022", highlight: true }
+        ]
+    },
+    
+    // Fall 2022 MOM JEANS TOUR END
 
   
     // 2023 Venues
