@@ -373,7 +373,7 @@ const map = L.map('map', {
     {
         name: "HOUSE OF BLUES",
         city: "San Diego, CA",
-        coordinates: [32.71646, -117.15999],
+        coordinates: [39.7600, -104.9838],
         media: [
             { type: "image", src: "https://cdn.shopify.com/s/files/1/0839/0154/6770/files/attachment-momjeans-2022tour.jpg?v=1736553771", tour: "fall-2022", highlight: true },
             { type: "video", src: "https://www.w3schools.com/html/mov_bbb.mp4", tour: "fall-2022", highlight: true }
@@ -382,7 +382,7 @@ const map = L.map('map', {
     {
         name: "HOUSE OF BLUES",
         city: "Anaheim, CA",
-        coordinates: [33.80633, -117.91177],
+        coordinates: [39.7600, -104.9838],
         media: [
             { type: "image", src: "https://cdn.shopify.com/s/files/1/0839/0154/6770/files/attachment-momjeans-2022tour.jpg?v=1736553771", tour: "fall-2022", highlight: true },
             { type: "video", src: "https://www.w3schools.com/html/mov_bbb.mp4", tour: "fall-2022", highlight: true }
@@ -391,7 +391,7 @@ const map = L.map('map', {
     {
         name: "THE UC THEATER",
         city: "Berkeley, CA",
-        coordinates: [37.8718, -122.2698],
+        coordinates: [39.7600, -104.9838],
         media: [
             { type: "image", src: "https://cdn.shopify.com/s/files/1/0839/0154/6770/files/attachment-momjeans-2022tour.jpg?v=1736553771", tour: "fall-2022", highlight: true },
             { type: "video", src: "https://www.w3schools.com/html/mov_bbb.mp4", tour: "fall-2022", highlight: true }
@@ -1028,27 +1028,51 @@ function updateMarkers() {
       checkbox.getAttribute('data-tour')
     );
   
-    venues.forEach(venue => {
-      const filteredMedia = venue.media.filter(item => selectedTours.includes(item.tour));
-  
-      if (filteredMedia.length > 0) {
-        const marker = L.marker(venue.coordinates).addTo(map);
-        markers.push(marker);
-  
-        // Find the highlighted content
-        const highlightMedia = filteredMedia.find(item => item.highlight) || filteredMedia[0]; // Fallback to the first item
-  
-        // Tooltip on hover
-        const flyer = highlightMedia?.src || ""; // Use the highlight's source
-        marker.bindTooltip(
-          `<strong>${venue.name}</strong><br/><img src="${flyer}" alt="Flyer" style="width:100px;">`,
-          { permanent: false, direction: "top", offset: [0, -10] }
-        );
-  
-        // Fullscreen on click
-        marker.on('click', () => openFullscreen(filteredMedia));
+venues.forEach((venue) => {
+  const filteredMedia = venue.media.filter((item) => selectedTours.includes(item.tour));
+
+  if (filteredMedia.length > 0) {
+    const marker = L.marker(venue.coordinates).addTo(map);
+    markers.push(marker);
+
+    // Find the highlighted content
+    const highlightMedia = filteredMedia.find((item) => item.highlight) || filteredMedia[0]; // Fallback to the first item
+
+    // Tooltip on hover
+    const flyer = highlightMedia?.src || ""; // Use the highlight's source
+    const tooltipContent = `
+      <div class="tooltip-clickable" style="cursor: pointer;">
+        <strong>${venue.name}</strong><br/>
+        <img src="${flyer}" alt="Flyer" style="width:160px;" class="tooltip-image">
+      </div>
+    `;
+    marker.bindTooltip(tooltipContent, {
+      permanent: false,
+      direction: "top",
+      offset: [0, -10],
+      interactive: true, // Make the tooltip interactive
+    });
+
+    // Add click event to the image inside the tooltip
+    marker.on('tooltipopen', (e) => {
+      console.log('opening tooltip');
+      const tooltipNode = e.target.getTooltip()._contentNode; // Get the tooltip DOM element
+      if (tooltipNode) {
+        const image = tooltipNode.querySelector('.tooltip-image');
+        if (image) {
+          image.addEventListener('click', (event) => {
+            event.stopPropagation(); // Prevent the marker click from triggering as well
+            console.log('clicking on content');
+            openFullscreen(filteredMedia); // Open the content viewer
+          });
+        }
       }
     });
+
+    // Fullscreen on marker click
+    marker.on('click', () => openFullscreen(filteredMedia));
+  }
+});
   }
 
   // sup hanit
@@ -1156,5 +1180,24 @@ filterToggleButton.addEventListener('click', () => {
     filterContainer.classList.remove('expanded');
     filterContainer.classList.add('collapsed');
     filterToggleButton.textContent = 'Filter'; // Update button text
+  }
+});
+
+// Add a global click event listener for tooltips
+document.addEventListener('click', (event) => {
+  // Check if the click happened inside the tooltip pane
+  const tooltipPane = document.querySelector('.leaflet-pane.leaflet-tooltip-pane');
+  if (tooltipPane && tooltipPane.contains(event.target)) {
+    // Find the corresponding marker based on the tooltip content
+    const tooltipContent = event.target.closest('.leaflet-tooltip');
+    if (tooltipContent) {
+      const tooltipText = tooltipContent.querySelector('strong')?.textContent;
+
+      // Match the venue based on the name in the tooltip
+      const matchedVenue = venues.find(venue => venue.name === tooltipText);
+      if (matchedVenue) {
+        openFullscreen(matchedVenue.media); // Open the content viewer with the venue's media
+      }
+    }
   }
 });
